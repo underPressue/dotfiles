@@ -145,3 +145,15 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Added by Windsurf
 export PATH="/Users/elrocie/.codeium/windsurf/bin:$PATH"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/elrocie/.cache/lm-studio/bin"
+
+# pnpm
+export PNPM_HOME="/Users/elrocie/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
