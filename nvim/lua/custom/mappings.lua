@@ -123,6 +123,18 @@ M.general = {
 		},
 		["<C-f>c"] = { 'yiw/<C-r>"', "Show word in current buffer" },
 
+    -- TS LSP ---------------------------------------------------------------------------------
+
+    ["<leader>to"] = {
+      "<cmd>TSLspOrganize<CR>",
+      "Organize Imports"
+    },
+
+    ["<leader>ti"] = {
+      "<cmd>TSLspImportAll<CR>",
+      "Add Missing Imports"
+    },
+
 		-- Copilot --------------------------------------------------------------------------------
 
 		["<C-P>"] = {
