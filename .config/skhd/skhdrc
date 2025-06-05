@@ -1,22 +1,24 @@
-cmd + alt + ctrl + shift - w : open -a "Windsurf"
+cmd + alt + ctrl + shift - 0x27 : open -a "Cursor"
+cmd + alt + ctrl + shift - 0x29 : open -a "WezTerm"
+# cmd + alt + ctrl + shift - w : open -a "Windsurf"
 cmd + alt + ctrl + shift - c : open -a "Google Chrome"
 cmd + alt + ctrl + shift - s : open -a "Safari"
-cmd + alt + ctrl + shift - m : open -a "Mail"
-cmd + alt + ctrl + shift - a : open -a "Arc"
+cmd + alt + ctrl + shift - l : open -a "Mail"
+cmd + alt + ctrl + shift - m : open -a "Mattermost"
 cmd + alt + ctrl + shift - n : open -a "Notes"
-cmd + alt + ctrl + shift - p : open -a "Кинопаб"
-cmd + alt + ctrl + shift - v : open -a "Visual Studio Code"
-# cmd + alt + ctrl + shift - f : open -a "Finder"
+cmd + alt + ctrl + shift - r : open -a "Reminders"
+cmd + alt + ctrl + shift - f : open -a "Figma"
 cmd + alt + ctrl + shift - y : open -a "YouTube"
-cmd + alt + ctrl + shift - 0x29 : open -a "WezTerm"
-cmd + alt + ctrl + shift - t : open -a "Telegram" && 'tell "Telegram" go fullscreen'
+cmd + alt + ctrl + shift - t : open -a "Telegram"
 cmd + alt + ctrl + shift - d : open -a "Figma"
-cmd + alt + ctrl + shift - g : open -a "ChatGPT"
-cmd + alt + ctrl + shift - z : open -a "iPhone Mirroring"
+cmd + alt + ctrl + shift - g : open -a "Grok"
 
+cmd + alt + ctrl + shift - z : open -a "iPhone Mirroring"
+cmd + alt + ctrl + shift - a : open -a "Arc"
+cmd + alt + ctrl + shift - p : open -a "Кинопаб"
 
 # show desktop
-cmd + alt + ctrl + shift - f : osascript -e 'tell application "System Events" to keystroke "f" using {command down, control down}'
+# cmd + alt + ctrl + shift - f : osascript -e 'tell application "System Events" to keystroke "f" using {command down, control down}'
 cmd + alt + ctrl + shift - h : osascript -e 'tell application "System Events" to keystroke "h" using {command down}'
 
 # Map Control + Return to switch input source
