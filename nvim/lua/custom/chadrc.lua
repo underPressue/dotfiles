@@ -1,8 +1,8 @@
 ---@type ChadrcConfig
 return {
   ui = {
-    theme = "github_dark",
-    theme_toggle = { "github_dark", "github_dark" },
+    theme = "tokyonight",
+    theme_toggle = { "tokyonight", "tokyonight" },
   },
 
   plugins = "custom.plugins",

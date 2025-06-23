@@ -1,7 +1,7 @@
 return {
   {
-    "zbirenbaum/copilot.lua",
     enabled = true,
+    "zbirenbaum/copilot.lua",
     event = "InsertEnter",
     opts = {
       suggestion = {
@@ -14,11 +14,21 @@ return {
   },
 
   {
-    "zbirenbaum/copilot-cmp",
-    enabled = true,
-    event = "InsertEnter",
-    config = function()
-      require("copilot_cmp").setup()
-    end,
-  },
+    "saghen/blink.cmp",
+    optional = true,
+    dependencies = { "fang2hou/blink-copilot" },
+    opts = {
+      sources = {
+        default = { "copilot" },
+        providers = {
+          copilot = {
+            name = "copilot",
+            module = "blink-copilot",
+            score_offset = 100,
+            async = true,
+          },
+        },
+      },
+    }
+  }
 }
