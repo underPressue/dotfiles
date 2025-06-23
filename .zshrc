@@ -157,3 +157,6 @@ case ":$PATH:" in
 esac
 # pnpm end
 export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
+
+# python
+export PATH="$HOME/Library/Python/3.11/bin:$PATH"
