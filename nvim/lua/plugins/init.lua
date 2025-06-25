@@ -180,12 +180,32 @@ local default_plugins = {
       require("which-key").setup(opts)
     end,
   },
+
+  -- Custom plugins
+  require("plugins.autosession"),
+  require("plugins.blink"),
+  require("plugins.copilot_chat"),
+  require("plugins.lsp-ts-utils"),
+  require("plugins.prisma"),
+  require("plugins.snacks"),
+  require("plugins.spectre"),
+  
+  -- Copilot plugins (from copilot_complet.lua)
+  {
+    enabled = true,
+    "zbirenbaum/copilot.lua",
+    event = "InsertEnter",
+    opts = {
+      suggestion = {
+        enable = false,
+      },
+      panel = {
+        enable = false,
+      },
+    },
+  },
 }
 
 local config = require("core.utils").load_config()
-
-if #config.plugins > 0 then
-  table.insert(default_plugins, { import = config.plugins })
-end
 
 require("lazy").setup(default_plugins, config.lazy_nvim)
