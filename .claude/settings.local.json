@@ -4,7 +4,8 @@
       "Bash(mv:*)",
       "Bash(rmdir:*)",
       "Bash(rm:*)",
-      "Bash(nvim:*)"
+      "Bash(nvim:*)",
+      "WebFetch(domain:cmp.saghen.dev)"
     ],
     "deny": []
   }
