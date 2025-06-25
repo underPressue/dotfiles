@@ -43,6 +43,12 @@ return {
 
     completion = {
       list = { selection = { preselect = false, auto_insert = true } },
+      menu = {
+        border = 'rounded',
+        draw = { gap = 2 },
+        winhighlight = 'Normal:BlinkCmpMenu,FloatBorder:BlinkCmpMenuBorder,CursorLine:BlinkCmpMenuSelection,Search:None',
+        scrollbar = true,
+      }
     },
 
     -- Default list of enabled providers defined so that you can extend it
