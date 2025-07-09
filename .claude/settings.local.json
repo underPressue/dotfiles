@@ -5,7 +5,13 @@
       "Bash(rmdir:*)",
       "Bash(rm:*)",
       "Bash(nvim:*)",
-      "WebFetch(domain:cmp.saghen.dev)"
+      "WebFetch(domain:cmp.saghen.dev)",
+      "Bash(find:*)",
+      "Bash(ls:*)",
+      "Bash(ghostty:*)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(pkill:*)"
     ],
     "deny": []
   }
