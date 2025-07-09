@@ -1,0 +1,4 @@
+command = /bin/zsh
+click-repeat-interval = 1700
+auto-update-channel = stable
+background = #000000
