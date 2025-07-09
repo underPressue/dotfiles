@@ -6,10 +6,12 @@ return {
 
     -- web dev stuff
     "cssls",
+    "css-lsp",
+    "sass-lsp",
     "html",
     "ts_ls",
     "deno",
-    "prettier",
+    "prettier/vim-prettier",
 
     -- c/cpp stuff
     "clangd",

@@ -42,7 +42,7 @@ M.capabilities.textDocument.completion.completionItem = {
   },
 }
 
-local servers = { "ts_ls" };
+local servers = { "ts_ls", "cssls", "html" };
 
 for _, lsp in ipairs(servers) do
   require('lspconfig')[lsp].setup {
@@ -138,6 +138,33 @@ require("lspconfig").lua_ls.setup {
         },
         maxPreload = 100000,
         preloadFileSize = 10000,
+      },
+    },
+  },
+}
+
+-- CSS/SCSS LSP configuration
+require("lspconfig").cssls.setup {
+  on_init = M.on_init,
+  on_attach = M.on_attach,
+  capabilities = M.capabilities,
+  settings = {
+    css = {
+      validate = true,
+      lint = {
+        unknownAtRules = "ignore",
+      },
+    },
+    scss = {
+      validate = true,
+      lint = {
+        unknownAtRules = "ignore",
+      },
+    },
+    less = {
+      validate = true,
+      lint = {
+        unknownAtRules = "ignore",
       },
     },
   },
