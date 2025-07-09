@@ -1,5 +1,5 @@
 cmd + alt + ctrl + shift - 0x27 : open -a "Cursor"
-cmd + alt + ctrl + shift - 0x29 : open -a "WezTerm"
+cmd + alt + ctrl + shift - 0x29 : open -a "Ghostty"
 # cmd + alt + ctrl + shift - w : open -a "Windsurf"
 cmd + alt + ctrl + shift - c : open -a "Google Chrome"
 cmd + alt + ctrl + shift - s : open -a "Safari"
