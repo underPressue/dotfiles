@@ -209,15 +209,17 @@ install_all
 # The keys are the source files in the SOURCE_DIR.
 # The values are the names of the target files in the home directory.
 declare -A files_to_link=(
-    ["nvim/"]=".config/nvim/lua/custom"
+    ["nvim/"]=".config/nvim"
     [".config/skhd"]=".config/skhd"
     [".config/aerospace"]=".config/aerospace"
     [".config/ghostty"]=".config/ghostty"
+    [".config/linearmouse"]=".config/linearmouse"
     [".tmux.conf"]=".tmux.conf"
     [".zshrc"]=".zshrc"
     [".p10k.zsh"]=".p10k.zsh"
     [".wezterm.lua"]=".wezterm.lua"
     [".gitconfig"]=".gitconfig"
+    ["Application Support/org.pqrs"]="/Library/Application Support/"
 )
 
 # Iterate through the associative array
