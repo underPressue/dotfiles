@@ -1,0 +1,68 @@
+[
+    {
+        "device_id": 4294969670,
+        "is_built_in_keyboard": true,
+        "is_game_pad": false,
+        "is_karabiner_virtual_hid_device": false,
+        "is_keyboard": true,
+        "is_pointing_device": false,
+        "location_id": 170,
+        "manufacturer": "Apple",
+        "product": "Apple Internal Keyboard / Trackpad",
+        "transport": "FIFO"
+    },
+    {
+        "device_id": 4294969741,
+        "is_built_in_pointing_device": true,
+        "is_game_pad": false,
+        "is_karabiner_virtual_hid_device": false,
+        "is_keyboard": false,
+        "is_pointing_device": true,
+        "location_id": 170,
+        "manufacturer": "Apple",
+        "product": "Apple Internal Keyboard / Trackpad",
+        "transport": "FIFO"
+    },
+    {
+        "device_id": 4296315424,
+        "is_game_pad": false,
+        "is_karabiner_virtual_hid_device": false,
+        "is_keyboard": true,
+        "is_pointing_device": true,
+        "location_id": 17825792,
+        "manufacturer": "Razer",
+        "product": "Orochi V2",
+        "product_id": 148,
+        "serial_number": "000000000000",
+        "transport": "USB",
+        "vendor_id": 5426
+    },
+    {
+        "device_id": 4296315414,
+        "is_game_pad": false,
+        "is_karabiner_virtual_hid_device": false,
+        "is_keyboard": true,
+        "is_pointing_device": false,
+        "location_id": 17825792,
+        "manufacturer": "Razer",
+        "product": "Orochi V2",
+        "product_id": 148,
+        "serial_number": "000000000000",
+        "transport": "USB",
+        "vendor_id": 5426
+    },
+    {
+        "device_id": 4296315418,
+        "is_game_pad": false,
+        "is_karabiner_virtual_hid_device": false,
+        "is_keyboard": false,
+        "is_pointing_device": true,
+        "location_id": 17825792,
+        "manufacturer": "Razer",
+        "product": "Orochi V2",
+        "product_id": 148,
+        "serial_number": "000000000000",
+        "transport": "USB",
+        "vendor_id": 5426
+    }
+]

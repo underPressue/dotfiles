@@ -1,0 +1,54 @@
+[
+    {
+        "device_id": 4294969748,
+        "device_identifiers": { "is_keyboard": true },
+        "is_apple": true,
+        "is_built_in_keyboard": true,
+        "location_id": 170,
+        "manufacturer": "Apple",
+        "product": "Apple Internal Keyboard / Trackpad",
+        "transport": "FIFO"
+    },
+    {
+        "device_id": 4294969823,
+        "device_identifiers": { "is_pointing_device": true },
+        "is_apple": true,
+        "is_built_in_pointing_device": true,
+        "location_id": 170,
+        "manufacturer": "Apple",
+        "product": "Apple Internal Keyboard / Trackpad",
+        "transport": "FIFO"
+    },
+    {
+        "device_id": 4294969107,
+        "device_identifiers": { "is_consumer": true },
+        "is_apple": true,
+        "manufacturer": "Apple",
+        "product": "Headset",
+        "transport": "Audio"
+    },
+    {
+        "device_id": 4295256311,
+        "device_identifiers": {
+            "is_keyboard": true,
+            "is_virtual_device": true,
+            "product_id": 591,
+            "vendor_id": 1452
+        },
+        "manufacturer": "pqrs.org",
+        "product": "Karabiner DriverKit VirtualHIDKeyboard 1.8.0",
+        "serial_number": "pqrs.org:Karabiner-DriverKit-VirtualHIDKeyboard"
+    },
+    {
+        "device_id": 4295256336,
+        "device_identifiers": {
+            "is_pointing_device": true,
+            "is_virtual_device": true,
+            "product_id": 10202,
+            "vendor_id": 5824
+        },
+        "manufacturer": "pqrs.org",
+        "product": "Karabiner DriverKit VirtualHIDPointing 1.8.0",
+        "serial_number": "pqrs.org:Karabiner-DriverKit-VirtualHIDPointing"
+    }
+]

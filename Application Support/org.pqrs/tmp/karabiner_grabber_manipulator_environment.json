@@ -1,0 +1,21 @@
+{
+    "frontmost_application": {
+        "bundle_identifier": "com.mitchellh.ghostty",
+        "bundle_path": "/Applications/Ghostty.app",
+        "file_path": "/Applications/Ghostty.app/Contents/MacOS/ghostty",
+        "pid": 18939
+    },
+    "input_source": {
+        "input_source_id": "com.apple.keylayout.US",
+        "language": "en"
+    },
+    "karabiner_machine_identifier": "krbn-402e5e52-e6a0-4fb2-bbae-68b0711c87e6",
+    "variables": {
+        "system.scroll_direction_is_natural": true,
+        "system.use_fkeys_as_standard_function_keys": false
+    },
+    "virtual_hid_devices_state": {
+        "virtual_hid_keyboard_ready": true,
+        "virtual_hid_pointing_ready": true
+    }
+}
