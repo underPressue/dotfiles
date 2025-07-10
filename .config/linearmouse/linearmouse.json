@@ -1,0 +1,1371 @@
+{
+  "schemes" : [
+    {
+      "pointer" : {
+        "acceleration" : 8,
+        "disableAcceleration" : false,
+        "speed" : 0.09
+      },
+      "if" : {
+        "device" : {
+          "vendorID" : "0x46d",
+          "category" : "mouse",
+          "productID" : "0xc547",
+          "productName" : "USB Receiver"
+        }
+      },
+      "buttons" : {
+        "mappings" : [
+          {
+            "option" : false,
+            "shift" : false,
+            "control" : false,
+            "button" : 2,
+            "command" : true,
+            "action" : {
+              "keyPress" : [
+                "command",
+                "0"
+              ]
+            }
+          },
+          {
+            "option" : false,
+            "command" : false,
+            "button" : 3,
+            "control" : false,
+            "repeat" : true,
+            "shift" : false,
+            "action" : "missionControl.spaceLeft"
+          },
+          {
+            "option" : false,
+            "shift" : false,
+            "control" : false,
+            "button" : 3,
+            "command" : true,
+            "action" : {
+              "keyPress" : [
+                "command",
+                "arrowLeft"
+              ]
+            }
+          },
+          {
+            "option" : false,
+            "shift" : true,
+            "control" : false,
+            "button" : 3,
+            "command" : true,
+            "action" : {
+              "keyPress" : [
+                "shift",
+                "command",
+                "["
+              ]
+            }
+          },
+          {
+            "repeat" : true,
+            "shift" : false,
+            "option" : false,
+            "button" : 4,
+            "command" : false,
+            "action" : "missionControl.spaceRight",
+            "control" : false
+          },
+          {
+            "option" : false,
+            "shift" : false,
+            "control" : false,
+            "button" : 4,
+            "command" : true,
+            "action" : {
+              "keyPress" : [
+                "command",
+                "arrowRight"
+              ]
+            }
+          },
+          {
+            "option" : false,
+            "shift" : true,
+            "control" : false,
+            "button" : 4,
+            "command" : true,
+            "action" : {
+              "keyPress" : [
+                "shift",
+                "command",
+                "]"
+              ]
+            }
+          },
+          {
+            "option" : false,
+            "action" : {
+              "keyPress" : [
+                "command",
+                "="
+              ]
+            },
+            "shift" : false,
+            "control" : false,
+            "command" : true,
+            "scroll" : "up"
+          },
+          {
+            "option" : false,
+            "action" : {
+              "keyPress" : [
+                "command",
+                "-"
+              ]
+            },
+            "shift" : false,
+            "control" : false,
+            "command" : true,
+            "scroll" : "down"
+          }
+        ]
+      },
+      "scrolling" : {
+        "reverse" : {
+          "vertical" : false
+        },
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "distance" : {
+          "vertical" : "auto"
+        },
+        "modifiers" : {
+          "vertical" : {
+            "control" : {
+              "scale" : 0.4,
+              "type" : "changeSpeed"
+            },
+            "shift" : {
+              "type" : "preventDefault"
+            },
+            "option" : {
+              "type" : "preventDefault"
+            }
+          }
+        },
+        "speed" : {
+          "vertical" : 30.37
+        }
+      }
+    },
+    {
+      "if" : {
+        "app" : "com.apple.Safari",
+        "device" : {
+          "productID" : "0xc547",
+          "vendorID" : "0x46d",
+          "productName" : "USB Receiver",
+          "category" : "mouse"
+        }
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 4
+        },
+        "speed" : {
+          "vertical" : 10
+        },
+        "distance" : {
+          "vertical" : "auto"
+        }
+      }
+    },
+    {
+      "if" : {
+        "app" : "com.google.Chrome",
+        "device" : {
+          "productID" : "0xc547",
+          "vendorID" : "0x46d",
+          "productName" : "USB Receiver",
+          "category" : "mouse"
+        }
+      },
+      "scrolling" : {
+        "speed" : {
+          "vertical" : 10.86
+        },
+        "distance" : {
+          "vertical" : "auto"
+        },
+        "acceleration" : {
+          "vertical" : 4.23
+        }
+      }
+    },
+    {
+      "if" : {
+        "app" : "com.microsoft.VSCode",
+        "device" : {
+          "vendorID" : "0x46d",
+          "productID" : "0xc547",
+          "productName" : "USB Receiver",
+          "category" : "mouse"
+        }
+      },
+      "scrolling" : {
+        "speed" : {
+          "vertical" : 1
+        }
+      }
+    },
+    {
+      "pointer" : {
+        "speed" : 0.037,
+        "acceleration" : 20,
+        "disableAcceleration" : false
+      },
+      "if" : {
+        "device" : {
+          "vendorID" : "0x5ac",
+          "category" : "trackpad",
+          "productID" : "0x343",
+          "productName" : "Apple Internal Keyboard \/ Trackpad"
+        }
+      },
+      "scrolling" : {
+        "speed" : {
+          "vertical" : 0
+        },
+        "distance" : {
+          "vertical" : "auto"
+        },
+        "acceleration" : {
+          "vertical" : 1
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "productID" : "0x343",
+          "vendorID" : "0x5ac",
+          "category" : "trackpad",
+          "productName" : "Apple Internal Keyboard \/ Trackpad"
+        },
+        "app" : "com.apple.Safari"
+      },
+      "scrolling" : {
+        "distance" : {
+          "vertical" : "auto"
+        },
+        "acceleration" : {
+          "vertical" : 2.24
+        },
+        "speed" : {
+          "vertical" : 0.1
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "productID" : "0x343",
+          "vendorID" : "0x5ac",
+          "productName" : "Apple Internal Keyboard \/ Trackpad",
+          "category" : "trackpad"
+        },
+        "app" : "com.google.Chrome"
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 2
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "productID" : "0x343",
+          "productName" : "Apple Internal Keyboard \/ Trackpad",
+          "category" : "trackpad",
+          "vendorID" : "0x5ac"
+        },
+        "app" : "com.microsoft.VSCode"
+      },
+      "scrolling" : {
+        "distance" : {
+          "vertical" : "auto"
+        },
+        "acceleration" : {
+          "vertical" : 0.7
+        },
+        "speed" : {
+          "vertical" : 0.01
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "productID" : "0x343",
+          "category" : "trackpad",
+          "vendorID" : "0x5ac",
+          "productName" : "Apple Internal Keyboard \/ Trackpad"
+        },
+        "app" : "com.microsoft.VSCodeInsiders"
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "speed" : {
+          "vertical" : 0
+        },
+        "distance" : {
+          "vertical" : "auto"
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "productName" : "V-UC Automouse",
+          "category" : "mouse",
+          "productID" : "0xff00",
+          "vendorID" : "0xff00"
+        }
+      },
+      "scrolling" : {
+        "speed" : {
+          "vertical" : 0
+        }
+      }
+    },
+    {
+      "pointer" : {
+        "acceleration" : 2,
+        "disableAcceleration" : false,
+        "speed" : 0.01
+      },
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0x94",
+          "vendorID" : "0x1532",
+          "productName" : "Orochi V2",
+          "serialNumber" : "000000000000"
+        }
+      },
+      "buttons" : {
+        "clickDebouncing" : {
+          "timeout" : 0
+        },
+        "mappings" : [
+          {
+            "button" : 2,
+            "command" : true,
+            "option" : false,
+            "control" : false,
+            "action" : {
+              "keyPress" : [
+                "command",
+                "0"
+              ]
+            },
+            "shift" : false
+          },
+          {
+            "option" : false,
+            "shift" : false,
+            "repeat" : true,
+            "action" : "missionControl.spaceLeft",
+            "button" : 3,
+            "command" : false,
+            "control" : false
+          },
+          {
+            "button" : 3,
+            "command" : true,
+            "option" : false,
+            "control" : false,
+            "action" : {
+              "keyPress" : [
+                "command",
+                "arrowLeft"
+              ]
+            },
+            "shift" : false
+          },
+          {
+            "button" : 3,
+            "command" : true,
+            "option" : false,
+            "control" : false,
+            "action" : {
+              "keyPress" : [
+                "shift",
+                "command",
+                "["
+              ]
+            },
+            "shift" : true
+          },
+          {
+            "option" : false,
+            "shift" : false,
+            "action" : "missionControl.spaceRight",
+            "command" : false,
+            "control" : false,
+            "button" : 4,
+            "repeat" : true
+          },
+          {
+            "button" : 4,
+            "command" : true,
+            "option" : false,
+            "control" : false,
+            "action" : {
+              "keyPress" : [
+                "command",
+                "arrowRight"
+              ]
+            },
+            "shift" : false
+          },
+          {
+            "button" : 4,
+            "command" : true,
+            "option" : false,
+            "control" : false,
+            "action" : {
+              "keyPress" : [
+                "shift",
+                "command",
+                "]"
+              ]
+            },
+            "shift" : true
+          },
+          {
+            "scroll" : "up",
+            "command" : true,
+            "option" : false,
+            "control" : false,
+            "action" : {
+              "keyPress" : [
+                "command",
+                "="
+              ]
+            },
+            "shift" : false
+          },
+          {
+            "scroll" : "down",
+            "command" : true,
+            "option" : false,
+            "control" : false,
+            "action" : {
+              "keyPress" : [
+                "command",
+                "-"
+              ]
+            },
+            "shift" : false
+          }
+        ]
+      },
+      "scrolling" : {
+        "distance" : {
+          "vertical" : "auto"
+        },
+        "reverse" : {
+          "vertical" : false
+        },
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "speed" : {
+          "vertical" : 15
+        },
+        "modifiers" : {
+          "vertical" : {
+            "control" : {
+              "type" : "ignore"
+            },
+            "option" : {
+              "type" : "preventDefault"
+            }
+          }
+        }
+      }
+    },
+    {
+      "scrolling" : {
+        "distance" : {
+          "vertical" : "auto"
+        },
+        "speed" : {
+          "vertical" : 0
+        },
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "reverse" : {
+          "vertical" : true
+        }
+      },
+      "if" : {
+        "device" : {
+          "productName" : "Orochi V2",
+          "serialNumber" : "000000000000",
+          "productID" : "0x94",
+          "category" : "mouse",
+          "vendorID" : "0x1532"
+        },
+        "app" : "com.microsoft.VSCode"
+      }
+    },
+    {
+      "scrolling" : {
+        "speed" : {
+          "vertical" : 0
+        },
+        "reverse" : {
+          "vertical" : false
+        },
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "distance" : {
+          "vertical" : "36px"
+        }
+      },
+      "if" : {
+        "device" : {
+          "productName" : "Orochi V2",
+          "vendorID" : "0x1532",
+          "category" : "mouse",
+          "productID" : "0x94",
+          "serialNumber" : "000000000000"
+        },
+        "app" : "com.apple.ScreenContinuity"
+      }
+    },
+    {
+      "buttons" : {
+        "mappings" : [
+          {
+            "command" : false,
+            "repeat" : true,
+            "shift" : false,
+            "button" : 3,
+            "option" : false,
+            "control" : false,
+            "action" : "missionControl.spaceLeft"
+          },
+          {
+            "command" : true,
+            "shift" : false,
+            "option" : false,
+            "control" : false,
+            "action" : {
+              "keyPress" : [
+                "command",
+                "arrowLeft"
+              ]
+            },
+            "button" : 3
+          },
+          {
+            "command" : true,
+            "shift" : true,
+            "option" : false,
+            "control" : false,
+            "action" : {
+              "keyPress" : [
+                "shift",
+                "command",
+                "["
+              ]
+            },
+            "button" : 3
+          },
+          {
+            "control" : false,
+            "repeat" : true,
+            "option" : false,
+            "button" : 4,
+            "shift" : false,
+            "command" : false,
+            "action" : "missionControl.spaceRight"
+          },
+          {
+            "command" : true,
+            "shift" : false,
+            "option" : false,
+            "control" : false,
+            "action" : {
+              "keyPress" : [
+                "command",
+                "arrowRight"
+              ]
+            },
+            "button" : 4
+          },
+          {
+            "command" : true,
+            "shift" : true,
+            "option" : false,
+            "control" : false,
+            "action" : {
+              "keyPress" : [
+                "shift",
+                "command",
+                "]"
+              ]
+            },
+            "button" : 4
+          },
+          {
+            "command" : true,
+            "shift" : false,
+            "option" : false,
+            "control" : false,
+            "action" : {
+              "keyPress" : [
+                "command",
+                "="
+              ]
+            },
+            "scroll" : "up"
+          },
+          {
+            "command" : true,
+            "shift" : false,
+            "option" : false,
+            "control" : false,
+            "action" : {
+              "keyPress" : [
+                "command",
+                "-"
+              ]
+            },
+            "scroll" : "down"
+          }
+        ]
+      },
+      "scrolling" : {
+        "distance" : {
+          "vertical" : "auto"
+        },
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "reverse" : {
+          "vertical" : true
+        },
+        "speed" : {
+          "vertical" : 1
+        }
+      },
+      "pointer" : {
+        "acceleration" : 1,
+        "speed" : 0.01
+      },
+      "if" : {
+        "device" : {
+          "productName" : "Orochi V2",
+          "vendorID" : "0x1532",
+          "productID" : "0x95",
+          "category" : "mouse"
+        }
+      }
+    },
+    {
+      "buttons" : {
+        "mappings" : [
+          {
+            "action" : "missionControl.spaceLeft",
+            "command" : false,
+            "button" : 3,
+            "control" : false,
+            "option" : false,
+            "shift" : false
+          },
+          {
+            "action" : {
+              "keyPress" : [
+                "shift",
+                "command",
+                "["
+              ]
+            },
+            "command" : true,
+            "button" : 3,
+            "control" : false,
+            "option" : false,
+            "shift" : false
+          },
+          {
+            "action" : "missionControl.spaceRight",
+            "command" : false,
+            "button" : 4,
+            "control" : false,
+            "option" : false,
+            "shift" : false
+          },
+          {
+            "action" : {
+              "keyPress" : [
+                "shift",
+                "command",
+                "]"
+              ]
+            },
+            "command" : true,
+            "button" : 4,
+            "control" : false,
+            "option" : false,
+            "shift" : false
+          },
+          {
+            "action" : "mouse.button.middle",
+            "command" : false,
+            "button" : 5,
+            "control" : false,
+            "option" : false,
+            "shift" : false
+          },
+          {
+            "action" : "missionControl",
+            "command" : false,
+            "button" : 7,
+            "control" : false,
+            "option" : false,
+            "shift" : false
+          },
+          {
+            "action" : {
+              "keyPress" : [
+                "command",
+                "-"
+              ]
+            },
+            "command" : true,
+            "scroll" : "down",
+            "control" : false,
+            "option" : false,
+            "shift" : false
+          },
+          {
+            "action" : {
+              "keyPress" : [
+                "command",
+                "="
+              ]
+            },
+            "command" : true,
+            "scroll" : "up",
+            "control" : false,
+            "option" : false,
+            "shift" : false
+          }
+        ]
+      },
+      "scrolling" : {
+        "distance" : {
+          "vertical" : "auto"
+        },
+        "speed" : {
+          "vertical" : 1
+        },
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "reverse" : {
+          "vertical" : false
+        }
+      },
+      "pointer" : {
+        "speed" : 0.03,
+        "acceleration" : 9
+      },
+      "if" : {
+        "device" : {
+          "serialNumber" : "0E5CB53E0F",
+          "vendorID" : "0x56e",
+          "productName" : "DEFT Pro TrackBall",
+          "productID" : "0x132",
+          "category" : "mouse"
+        }
+      }
+    },
+    {
+      "buttons" : {
+        "mappings" : [
+          {
+            "command" : false,
+            "shift" : false,
+            "button" : 2,
+            "option" : false,
+            "control" : false,
+            "action" : {
+              "keyPress" : [
+                "command",
+                "h"
+              ]
+            }
+          },
+          {
+            "action" : "missionControl.spaceLeft",
+            "option" : false,
+            "command" : false,
+            "repeat" : true,
+            "control" : false,
+            "shift" : false,
+            "button" : 3
+          },
+          {
+            "action" : "missionControl.spaceRight",
+            "option" : false,
+            "command" : false,
+            "repeat" : true,
+            "control" : false,
+            "shift" : false,
+            "button" : 4
+          },
+          {
+            "command" : false,
+            "shift" : false,
+            "button" : 5,
+            "option" : false,
+            "control" : false,
+            "action" : "mouse.button.middle"
+          },
+          {
+            "command" : false,
+            "shift" : false,
+            "button" : 7,
+            "option" : false,
+            "control" : false,
+            "action" : "missionControl"
+          },
+          {
+            "command" : false,
+            "shift" : false,
+            "option" : false,
+            "control" : false,
+            "scroll" : "left",
+            "action" : {
+              "mouse.wheel.scrollRight" : "17.2px"
+            }
+          },
+          {
+            "command" : false,
+            "shift" : false,
+            "option" : false,
+            "control" : false,
+            "scroll" : "right",
+            "action" : {
+              "mouse.wheel.scrollLeft" : "17.3px"
+            }
+          },
+          {
+            "command" : true,
+            "shift" : false,
+            "option" : false,
+            "control" : false,
+            "scroll" : "up",
+            "action" : {
+              "keyPress" : [
+                "command",
+                "="
+              ]
+            }
+          },
+          {
+            "command" : true,
+            "shift" : false,
+            "option" : false,
+            "control" : false,
+            "scroll" : "down",
+            "action" : {
+              "keyPress" : [
+                "command",
+                "-"
+              ]
+            }
+          }
+        ]
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "distance" : {
+          "vertical" : "auto"
+        },
+        "speed" : {
+          "vertical" : 0
+        },
+        "reverse" : {
+          "vertical" : false
+        }
+      },
+      "pointer" : {
+        "acceleration" : 7,
+        "speed" : 0.01,
+        "disableAcceleration" : false
+      },
+      "if" : {
+        "device" : {
+          "productName" : "DEFT Pro TrackBall",
+          "category" : "mouse",
+          "vendorID" : "0x56e",
+          "serialNumber" : "1F355BA43014",
+          "productID" : "0x133"
+        }
+      }
+    },
+    {
+      "scrolling" : {
+        "speed" : {
+          "vertical" : 0
+        },
+        "reverse" : {
+          "vertical" : false
+        },
+        "distance" : {
+          "vertical" : "auto"
+        },
+        "modifiers" : {
+          "vertical" : {
+            "control" : {
+              "type" : "changeSpeed",
+              "scale" : 5
+            },
+            "option" : {
+              "type" : "preventDefault"
+            }
+          }
+        },
+        "acceleration" : {
+          "vertical" : 4
+        }
+      },
+      "pointer" : {
+        "speed" : 0.01,
+        "acceleration" : 5
+      },
+      "if" : {
+        "device" : {
+          "vendorID" : "0x0",
+          "category" : "trackpad",
+          "productID" : "0x0",
+          "productName" : "Apple Internal Keyboard \/ Trackpad"
+        }
+      }
+    },
+    {
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 0.8
+        }
+      },
+      "if" : {
+        "app" : "com.microsoft.VSCode",
+        "device" : {
+          "vendorID" : "0x0",
+          "productName" : "Apple Internal Keyboard \/ Trackpad",
+          "category" : "trackpad",
+          "productID" : "0x0"
+        }
+      }
+    },
+    {
+      "scrolling" : {
+        "speed" : {
+          "vertical" : 0
+        },
+        "distance" : {
+          "vertical" : "auto"
+        },
+        "acceleration" : {
+          "vertical" : 1
+        }
+      },
+      "if" : {
+        "device" : {
+          "productName" : "Apple Internal Keyboard \/ Trackpad",
+          "vendorID" : "0x0",
+          "productID" : "0x0",
+          "category" : "trackpad"
+        },
+        "app" : "com.googlecode.iterm2"
+      }
+    },
+    {
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 0.14
+        }
+      },
+      "pointer" : {
+        "speed" : 0.01,
+        "acceleration" : 2,
+        "disableAcceleration" : false
+      },
+      "if" : {
+        "device" : {
+          "productID" : "0x27da",
+          "vendorID" : "0x16c0",
+          "category" : "mouse",
+          "productName" : "Karabiner DriverKit VirtualHIDPointing 1.7.0",
+          "serialNumber" : "pqrs.org:Karabiner-DriverKit-VirtualHIDPointing"
+        }
+      }
+    },
+    {
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 3
+        }
+      },
+      "pointer" : {
+        "acceleration" : 20,
+        "speed" : 0.03
+      },
+      "if" : {
+        "device" : {
+          "category" : "trackpad",
+          "productID" : "0x265",
+          "serialNumber" : "c0-95-6d-05-6d-1e",
+          "productName" : "Magic Trackpad",
+          "vendorID" : "0x4c"
+        }
+      }
+    },
+    {
+      "scrolling" : {
+        "modifiers" : {
+          "vertical" : {
+            "control" : {
+              "scale" : 6,
+              "type" : "changeSpeed"
+            }
+          }
+        },
+        "acceleration" : {
+          "vertical" : 2
+        },
+        "distance" : {
+          "vertical" : "auto"
+        },
+        "speed" : {
+          "vertical" : 0
+        }
+      },
+      "pointer" : {
+        "acceleration" : 1.3,
+        "speed" : 0.01
+      },
+      "if" : {
+        "device" : {
+          "productName" : "Magic Trackpad",
+          "productID" : "0x265",
+          "vendorID" : "0x5ac",
+          "serialNumber" : "CC2403405GS27CRD5",
+          "category" : "trackpad"
+        }
+      }
+    },
+    {
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 2
+        },
+        "modifiers" : {
+          "vertical" : {
+            "control" : {
+              "type" : "changeSpeed",
+              "scale" : 5
+            }
+          }
+        }
+      },
+      "pointer" : {
+        "speed" : 0.01,
+        "acceleration" : 1.1
+      },
+      "if" : {
+        "device" : {
+          "productID" : "0x265",
+          "category" : "trackpad",
+          "vendorID" : "0x4c",
+          "serialNumber" : "C0:95:6D:05:6D:1E",
+          "productName" : "elTrackpad"
+        }
+      }
+    },
+    {
+      "buttons" : {
+        "mappings" : [
+          {
+            "scroll" : "up",
+            "command" : true,
+            "control" : false,
+            "option" : false,
+            "action" : {
+              "keyPress" : [
+                "command",
+                "="
+              ]
+            },
+            "shift" : false
+          },
+          {
+            "scroll" : "down",
+            "command" : true,
+            "control" : false,
+            "option" : false,
+            "action" : {
+              "keyPress" : [
+                "command",
+                "-"
+              ]
+            },
+            "shift" : false
+          }
+        ]
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        }
+      },
+      "pointer" : {
+        "acceleration" : 2.5144
+      },
+      "if" : {
+        "device" : {
+          "productName" : "Karabiner DriverKit VirtualHIDPointing 1.8.0",
+          "productID" : "0x27da",
+          "vendorID" : "0x16c0",
+          "category" : "mouse",
+          "serialNumber" : "pqrs.org:Karabiner-DriverKit-VirtualHIDPointing"
+        }
+      }
+    },
+    {
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 2
+        },
+        "speed" : {
+          "vertical" : 2
+        }
+      },
+      "pointer" : {
+        "disableAcceleration" : false,
+        "acceleration" : 2.35,
+        "speed" : 0.01
+      },
+      "if" : {
+        "device" : {
+          "productID" : "0x269",
+          "category" : "mouse",
+          "productName" : "Magic Mouse",
+          "vendorID" : "0x4c",
+          "serialNumber" : "00:81:2A:94:F6:8E"
+        }
+      }
+    },
+    {
+      "buttons" : {
+        "mappings" : [
+          {
+            "option" : false,
+            "shift" : true,
+            "control" : false,
+            "command" : true,
+            "action" : {
+              "keyPress" : [
+                "shift",
+                "command",
+                "]"
+              ]
+            },
+            "scroll" : "left"
+          },
+          {
+            "option" : false,
+            "shift" : true,
+            "control" : false,
+            "command" : true,
+            "action" : {
+              "keyPress" : [
+                "shift",
+                "command",
+                "["
+              ]
+            },
+            "scroll" : "right"
+          }
+        ],
+        "universalBackForward" : true
+      },
+      "scrolling" : {
+        "speed" : {
+          "vertical" : 3
+        },
+        "modifiers" : {
+          "vertical" : {
+            "control" : {
+              "scale" : 3.5,
+              "type" : "changeSpeed"
+            }
+          }
+        },
+        "acceleration" : {
+          "vertical" : 1.5
+        },
+        "distance" : {
+          "vertical" : "auto"
+        }
+      },
+      "pointer" : {
+        "disableAcceleration" : false,
+        "acceleration" : 0.3475,
+        "speed" : 0.01
+      },
+      "if" : {
+        "device" : {
+          "productName" : "Sergey’s Magic Mouse",
+          "vendorID" : "0x4c",
+          "category" : "mouse",
+          "serialNumber" : "00:81:2A:94:F6:8E",
+          "productID" : "0x269"
+        }
+      }
+    },
+    {
+      "buttons" : {
+        "clickDebouncing" : {
+          "timeout" : 0
+        },
+        "mappings" : [
+          {
+            "shift" : false,
+            "control" : false,
+            "action" : {
+              "keyPress" : [
+                "command",
+                "-"
+              ]
+            },
+            "option" : false,
+            "scroll" : "down",
+            "command" : true
+          },
+          {
+            "shift" : false,
+            "control" : false,
+            "action" : {
+              "keyPress" : [
+                "command",
+                "="
+              ]
+            },
+            "option" : false,
+            "scroll" : "up",
+            "command" : true
+          },
+          {
+            "shift" : true,
+            "control" : false,
+            "action" : {
+              "keyPress" : [
+                "shift",
+                "command",
+                "["
+              ]
+            },
+            "option" : false,
+            "scroll" : "left",
+            "command" : true
+          },
+          {
+            "shift" : true,
+            "control" : false,
+            "action" : {
+              "keyPress" : [
+                "shift",
+                "command",
+                "]"
+              ]
+            },
+            "option" : false,
+            "scroll" : "right",
+            "command" : true
+          }
+        ]
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 2
+        },
+        "reverse" : {
+          "vertical" : false
+        },
+        "speed" : {
+          "vertical" : 14.55
+        }
+      },
+      "pointer" : {
+        "acceleration" : 4,
+        "speed" : 0.01
+      },
+      "if" : {
+        "device" : {
+          "vendorID" : "0x46d",
+          "productID" : "0xb036",
+          "productName" : "Pebble M350s",
+          "serialNumber" : "F1F33511",
+          "category" : "mouse"
+        }
+      }
+    },
+    {
+      "scrolling" : {
+        "reverse" : {
+          "vertical" : true
+        }
+      },
+      "if" : {
+        "device" : {
+          "productName" : "V-Pebble M350s",
+          "vendorID" : "0x46d",
+          "category" : "mouse",
+          "productID" : "0xb036"
+        }
+      }
+    },
+    {
+      "pointer" : {
+        "speed" : 0.01,
+        "acceleration" : 0.98,
+        "disableAcceleration" : false
+      },
+      "if" : {
+        "device" : {
+          "productID" : "0x265",
+          "vendorID" : "0x4c",
+          "category" : "trackpad",
+          "productName" : "Callisto",
+          "serialNumber" : "C0:95:6D:05:6D:1E"
+        }
+      }
+    }
+  ],
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0"
+}
