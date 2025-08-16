@@ -1,8 +1,0 @@
-{
-    "driver_activated": true,
-    "driver_connected": true,
-    "driver_loaded": true,
-    "driver_version_matched": true,
-    "driver_version_mismatched": false,
-    "hid_device_open_permitted": true
-}
