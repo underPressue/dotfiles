@@ -1,17 +1,22 @@
 {
   "permissions": {
     "allow": [
-      "Bash(mv:*)",
-      "Bash(rmdir:*)",
-      "Bash(rm:*)",
-      "Bash(nvim:*)",
-      "WebFetch(domain:cmp.saghen.dev)",
       "Bash(find:*)",
       "Bash(ls:*)",
-      "Bash(ghostty:*)",
+      "Bash(grep:*)",
+      "Bash(npm install:*)",
+      "Bash(npm test:*)",
+      "Bash(node:*)",
+      "Bash(npm run lint)",
+      "Bash(npm run build:*)",
       "Bash(mkdir:*)",
-      "Bash(cp:*)",
-      "Bash(pkill:*)"
+      "Bash(npx tsc:*)",
+      "Bash(npx jest:*)",
+      "Bash(rg:*)",
+      "Bash(npm run lint:*)",
+      "Bash(npx eslint:*)",
+      "Bash(npm run test:*)",
+      "Bash(sed:*)"
     ],
     "deny": []
   }
