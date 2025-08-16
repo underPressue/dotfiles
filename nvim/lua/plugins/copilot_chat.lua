@@ -1,8 +1,8 @@
 return {
-  enabled = false;
   "CopilotC-Nvim/CopilotChat.nvim",
   branch = "main",
   event = "VeryLazy",
+  enabled = true,
   opts = {
     debug = false,   -- Enable debugging
     -- See Configuration section for rest
