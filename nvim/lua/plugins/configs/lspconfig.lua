@@ -1,5 +1,4 @@
-dofile(vim.g.base46_cache .. "lsp")
-require "nvchad.lsp"
+-- removed nvchad.lsp dependency
 
 local M = {}
 local utils = require "core.utils"
@@ -10,9 +9,7 @@ M.on_attach = function(client, bufnr)
 
 
 
-  if client.server_capabilities.signatureHelpProvider then
-    require("nvchad.signature").setup(client)
-  end
+  -- removed nvchad.signature dependency
 end
 
 -- disable semantic tokens
@@ -133,7 +130,6 @@ require("lspconfig").lua_ls.setup {
         library = {
           [vim.fn.expand "$VIMRUNTIME/lua"] = true,
           [vim.fn.expand "$VIMRUNTIME/lua/vim/lsp"] = true,
-          [vim.fn.stdpath "data" .. "/lazy/ui/nvchad_types"] = true,
           [vim.fn.stdpath "data" .. "/lazy/lazy.nvim/lua/lazy"] = true,
         },
         maxPreload = 100000,

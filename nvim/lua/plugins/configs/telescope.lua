@@ -48,7 +48,7 @@ local options = {
     },
   },
 
-  extensions_list = { "terms" },
+  extensions_list = {},
 }
 
 return options

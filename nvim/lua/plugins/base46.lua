@@ -1,5 +1,5 @@
 return {
-  enable = true,
+  enabled = false,
   "NvChad/base46",
   branch = "v2.0",
   build = function()

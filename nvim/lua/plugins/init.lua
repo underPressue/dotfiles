@@ -6,9 +6,9 @@ local default_plugins = {
   require("plugins.plenary"),
   require("plugins.prettier"),
 
-  -- NvChad core plugins
-  require("plugins.base46"),
-  require("plugins.ui"),
+  -- NvChad core plugins (disabled)
+  -- require("plugins.base46"),
+  -- require("plugins.ui"),
   require("plugins.nvterm"),
   require("plugins.colorizer"),
   require("plugins.nvim-web-devicons"),
