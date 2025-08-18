@@ -117,6 +117,8 @@ source $ZSH/oh-my-zsh.sh
 
 alias ls="eza -1 -h --icons=always --no-permissions --no-user -T -a --level 1"
 alias vi="nvim"
+alias td="turbo dev"
+alias lg="lazygit"
 alias insomnia="sudo pmset disablesleep 1"
 alias sleep="sudo pmset disablesleep 0"
 
@@ -161,3 +163,6 @@ export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
 
 # python
 export PATH="$HOME/Library/Python/3.11/bin:$PATH"
+alias claude="/Users/elrocie/.claude/local/claude"
+
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
