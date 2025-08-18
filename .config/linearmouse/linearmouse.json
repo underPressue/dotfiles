@@ -1,1370 +1,1253 @@
 {
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.1",
-  "schemes" : [
+  "$schema": "https://schema.linearmouse.app/0.10.1",
+  "schemes": [
     {
-      "buttons" : {
-        "mappings" : [
+      "buttons": {
+        "mappings": [
           {
-            "action" : {
-              "keyPress" : [
-                "command",
-                "0"
-              ]
+            "action": {
+              "keyPress": ["command", "0"]
             },
-            "button" : 2,
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "shift" : false
+            "button": 2,
+            "command": true,
+            "control": false,
+            "option": false,
+            "shift": false
           },
           {
-            "action" : "missionControl.spaceLeft",
-            "button" : 3,
-            "command" : false,
-            "control" : false,
-            "option" : false,
-            "repeat" : true,
-            "shift" : false
+            "action": "missionControl.spaceLeft",
+            "button": 3,
+            "command": false,
+            "control": false,
+            "option": false,
+            "repeat": true,
+            "shift": false
           },
           {
-            "action" : {
-              "keyPress" : [
-                "command",
-                "arrowLeft"
-              ]
+            "action": {
+              "keyPress": ["command", "arrowLeft"]
             },
-            "button" : 3,
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "shift" : false
+            "button": 3,
+            "command": true,
+            "control": false,
+            "option": false,
+            "shift": false
           },
           {
-            "action" : {
-              "keyPress" : [
-                "shift",
-                "command",
-                "["
-              ]
+            "action": {
+              "keyPress": ["shift", "command", "["]
             },
-            "button" : 3,
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "shift" : true
+            "button": 3,
+            "command": true,
+            "control": false,
+            "option": false,
+            "shift": true
           },
           {
-            "action" : "missionControl.spaceRight",
-            "button" : 4,
-            "command" : false,
-            "control" : false,
-            "option" : false,
-            "repeat" : true,
-            "shift" : false
+            "action": "missionControl.spaceRight",
+            "button": 4,
+            "command": false,
+            "control": false,
+            "option": false,
+            "repeat": true,
+            "shift": false
           },
           {
-            "action" : {
-              "keyPress" : [
-                "command",
-                "arrowRight"
-              ]
+            "action": {
+              "keyPress": ["command", "arrowRight"]
             },
-            "button" : 4,
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "shift" : false
+            "button": 4,
+            "command": true,
+            "control": false,
+            "option": false,
+            "shift": false
           },
           {
-            "action" : {
-              "keyPress" : [
-                "shift",
-                "command",
-                "]"
-              ]
+            "action": {
+              "keyPress": ["shift", "command", "]"]
             },
-            "button" : 4,
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "shift" : true
+            "button": 4,
+            "command": true,
+            "control": false,
+            "option": false,
+            "shift": true
           },
           {
-            "action" : {
-              "keyPress" : [
-                "command",
-                "="
-              ]
+            "action": {
+              "keyPress": ["command", "="]
             },
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "scroll" : "up",
-            "shift" : false
+            "command": true,
+            "control": false,
+            "option": false,
+            "scroll": "up",
+            "shift": false
           },
           {
-            "action" : {
-              "keyPress" : [
-                "command",
-                "-"
-              ]
+            "action": {
+              "keyPress": ["command", "-"]
             },
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "scroll" : "down",
-            "shift" : false
+            "command": true,
+            "control": false,
+            "option": false,
+            "scroll": "down",
+            "shift": false
           }
         ]
       },
-      "if" : {
-        "device" : {
-          "category" : "mouse",
-          "productID" : "0xc547",
-          "productName" : "USB Receiver",
-          "vendorID" : "0x46d"
+      "if": {
+        "device": {
+          "category": "mouse",
+          "productID": "0xc547",
+          "productName": "USB Receiver",
+          "vendorID": "0x46d"
         }
       },
-      "pointer" : {
-        "acceleration" : 8,
-        "disableAcceleration" : false,
-        "speed" : 0.09
+      "pointer": {
+        "acceleration": 8,
+        "disableAcceleration": false,
+        "speed": 0.09
       },
-      "scrolling" : {
-        "acceleration" : {
-          "vertical" : 1
+      "scrolling": {
+        "acceleration": {
+          "vertical": 1
         },
-        "distance" : {
-          "vertical" : "auto"
+        "distance": {
+          "vertical": "auto"
         },
-        "modifiers" : {
-          "vertical" : {
-            "control" : {
-              "scale" : 0.4,
-              "type" : "changeSpeed"
+        "modifiers": {
+          "vertical": {
+            "control": {
+              "scale": 0.4,
+              "type": "changeSpeed"
             },
-            "option" : {
-              "type" : "preventDefault"
+            "option": {
+              "type": "preventDefault"
             },
-            "shift" : {
-              "type" : "preventDefault"
+            "shift": {
+              "type": "preventDefault"
             }
           }
         },
-        "reverse" : {
-          "vertical" : false
+        "reverse": {
+          "vertical": false
         },
-        "speed" : {
-          "vertical" : 30.37
+        "speed": {
+          "vertical": 0
         }
       }
     },
     {
-      "if" : {
-        "app" : "com.apple.Safari",
-        "device" : {
-          "category" : "mouse",
-          "productID" : "0xc547",
-          "productName" : "USB Receiver",
-          "vendorID" : "0x46d"
+      "if": {
+        "app": "com.apple.Safari",
+        "device": {
+          "category": "mouse",
+          "productID": "0xc547",
+          "productName": "USB Receiver",
+          "vendorID": "0x46d"
         }
       },
-      "scrolling" : {
-        "acceleration" : {
-          "vertical" : 4
+      "scrolling": {
+        "acceleration": {
+          "vertical": 4
         },
-        "distance" : {
-          "vertical" : "auto"
+        "distance": {
+          "vertical": "auto"
         },
-        "speed" : {
-          "vertical" : 10
+        "speed": {
+          "vertical": 10
         }
       }
     },
     {
-      "if" : {
-        "app" : "com.google.Chrome",
-        "device" : {
-          "category" : "mouse",
-          "productID" : "0xc547",
-          "productName" : "USB Receiver",
-          "vendorID" : "0x46d"
+      "if": {
+        "app": "com.google.Chrome",
+        "device": {
+          "category": "mouse",
+          "productID": "0xc547",
+          "productName": "USB Receiver",
+          "vendorID": "0x46d"
         }
       },
-      "scrolling" : {
-        "acceleration" : {
-          "vertical" : 4.23
+      "scrolling": {
+        "acceleration": {
+          "vertical": 4.23
         },
-        "distance" : {
-          "vertical" : "auto"
+        "distance": {
+          "vertical": "auto"
         },
-        "speed" : {
-          "vertical" : 10.86
+        "speed": {
+          "vertical": 10.86
         }
       }
     },
     {
-      "if" : {
-        "app" : "com.microsoft.VSCode",
-        "device" : {
-          "category" : "mouse",
-          "productID" : "0xc547",
-          "productName" : "USB Receiver",
-          "vendorID" : "0x46d"
+      "if": {
+        "app": "com.microsoft.VSCode",
+        "device": {
+          "category": "mouse",
+          "productID": "0xc547",
+          "productName": "USB Receiver",
+          "vendorID": "0x46d"
         }
       },
-      "scrolling" : {
-        "speed" : {
-          "vertical" : 1
+      "scrolling": {
+        "speed": {
+          "vertical": 1
         }
       }
     },
     {
-      "if" : {
-        "device" : {
-          "category" : "trackpad",
-          "productID" : "0x343",
-          "productName" : "Apple Internal Keyboard \/ Trackpad",
-          "vendorID" : "0x5ac"
+      "if": {
+        "device": {
+          "category": "trackpad",
+          "productID": "0x343",
+          "productName": "Apple Internal Keyboard / Trackpad",
+          "vendorID": "0x5ac"
         }
       },
-      "pointer" : {
-        "acceleration" : 20,
-        "disableAcceleration" : false,
-        "speed" : 0.037
+      "pointer": {
+        "acceleration": 20,
+        "disableAcceleration": false,
+        "speed": 0.037
       },
-      "scrolling" : {
-        "acceleration" : {
-          "vertical" : 1
+      "scrolling": {
+        "acceleration": {
+          "vertical": 1
         },
-        "distance" : {
-          "vertical" : "auto"
+        "distance": {
+          "vertical": "auto"
         },
-        "speed" : {
-          "vertical" : 0
+        "speed": {
+          "vertical": 0
         }
       }
     },
     {
-      "if" : {
-        "app" : "com.apple.Safari",
-        "device" : {
-          "category" : "trackpad",
-          "productID" : "0x343",
-          "productName" : "Apple Internal Keyboard \/ Trackpad",
-          "vendorID" : "0x5ac"
+      "if": {
+        "app": "com.apple.Safari",
+        "device": {
+          "category": "trackpad",
+          "productID": "0x343",
+          "productName": "Apple Internal Keyboard / Trackpad",
+          "vendorID": "0x5ac"
         }
       },
-      "scrolling" : {
-        "acceleration" : {
-          "vertical" : 2.24
+      "scrolling": {
+        "acceleration": {
+          "vertical": 2.24
         },
-        "distance" : {
-          "vertical" : "auto"
+        "distance": {
+          "vertical": "auto"
         },
-        "speed" : {
-          "vertical" : 0.1
+        "speed": {
+          "vertical": 0.1
         }
       }
     },
     {
-      "if" : {
-        "app" : "com.google.Chrome",
-        "device" : {
-          "category" : "trackpad",
-          "productID" : "0x343",
-          "productName" : "Apple Internal Keyboard \/ Trackpad",
-          "vendorID" : "0x5ac"
+      "if": {
+        "app": "com.google.Chrome",
+        "device": {
+          "category": "trackpad",
+          "productID": "0x343",
+          "productName": "Apple Internal Keyboard / Trackpad",
+          "vendorID": "0x5ac"
         }
       },
-      "scrolling" : {
-        "acceleration" : {
-          "vertical" : 2
+      "scrolling": {
+        "acceleration": {
+          "vertical": 2
         }
       }
     },
     {
-      "if" : {
-        "app" : "com.microsoft.VSCode",
-        "device" : {
-          "category" : "trackpad",
-          "productID" : "0x343",
-          "productName" : "Apple Internal Keyboard \/ Trackpad",
-          "vendorID" : "0x5ac"
+      "if": {
+        "app": "com.microsoft.VSCode",
+        "device": {
+          "category": "trackpad",
+          "productID": "0x343",
+          "productName": "Apple Internal Keyboard / Trackpad",
+          "vendorID": "0x5ac"
         }
       },
-      "scrolling" : {
-        "acceleration" : {
-          "vertical" : 0.7
+      "scrolling": {
+        "acceleration": {
+          "vertical": 0.7
         },
-        "distance" : {
-          "vertical" : "auto"
+        "distance": {
+          "vertical": "auto"
         },
-        "speed" : {
-          "vertical" : 0.01
+        "speed": {
+          "vertical": 0.01
         }
       }
     },
     {
-      "if" : {
-        "app" : "com.microsoft.VSCodeInsiders",
-        "device" : {
-          "category" : "trackpad",
-          "productID" : "0x343",
-          "productName" : "Apple Internal Keyboard \/ Trackpad",
-          "vendorID" : "0x5ac"
+      "if": {
+        "app": "com.microsoft.VSCodeInsiders",
+        "device": {
+          "category": "trackpad",
+          "productID": "0x343",
+          "productName": "Apple Internal Keyboard / Trackpad",
+          "vendorID": "0x5ac"
         }
       },
-      "scrolling" : {
-        "acceleration" : {
-          "vertical" : 1
+      "scrolling": {
+        "acceleration": {
+          "vertical": 1
         },
-        "distance" : {
-          "vertical" : "auto"
+        "distance": {
+          "vertical": "auto"
         },
-        "speed" : {
-          "vertical" : 0
+        "speed": {
+          "vertical": 0
         }
       }
     },
     {
-      "if" : {
-        "device" : {
-          "category" : "mouse",
-          "productID" : "0xff00",
-          "productName" : "V-UC Automouse",
-          "vendorID" : "0xff00"
+      "if": {
+        "device": {
+          "category": "mouse",
+          "productID": "0xff00",
+          "productName": "V-UC Automouse",
+          "vendorID": "0xff00"
         }
       },
-      "scrolling" : {
-        "speed" : {
-          "vertical" : 0
+      "scrolling": {
+        "speed": {
+          "vertical": 0
         }
       }
     },
     {
-      "buttons" : {
-        "clickDebouncing" : {
-          "timeout" : 0
+      "buttons": {
+        "clickDebouncing": {
+          "timeout": 0
         },
-        "mappings" : [
+        "mappings": [
           {
-            "action" : {
-              "keyPress" : [
-                "command",
-                "0"
-              ]
+            "action": {
+              "keyPress": ["command", "0"]
             },
-            "button" : 2,
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "shift" : false
+            "button": 2,
+            "command": true,
+            "control": false,
+            "option": false,
+            "shift": false
           },
           {
-            "action" : "missionControl.spaceLeft",
-            "button" : 3,
-            "command" : false,
-            "control" : false,
-            "option" : false,
-            "repeat" : true,
-            "shift" : false
+            "action": "missionControl.spaceLeft",
+            "button": 3,
+            "command": false,
+            "control": false,
+            "option": false,
+            "repeat": true,
+            "shift": false
           },
           {
-            "action" : {
-              "keyPress" : [
-                "command",
-                "arrowLeft"
-              ]
+            "action": {
+              "keyPress": ["command", "arrowLeft"]
             },
-            "button" : 3,
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "shift" : false
+            "button": 3,
+            "command": true,
+            "control": false,
+            "option": false,
+            "shift": false
           },
           {
-            "action" : {
-              "keyPress" : [
-                "shift",
-                "command",
-                "["
-              ]
+            "action": {
+              "keyPress": ["shift", "command", "["]
             },
-            "button" : 3,
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "shift" : true
+            "button": 3,
+            "command": true,
+            "control": false,
+            "option": false,
+            "shift": true
           },
           {
-            "action" : "missionControl.spaceRight",
-            "button" : 4,
-            "command" : false,
-            "control" : false,
-            "option" : false,
-            "repeat" : true,
-            "shift" : false
+            "action": "missionControl.spaceRight",
+            "button": 4,
+            "command": false,
+            "control": false,
+            "option": false,
+            "repeat": true,
+            "shift": false
           },
           {
-            "action" : {
-              "keyPress" : [
-                "command",
-                "arrowRight"
-              ]
+            "action": {
+              "keyPress": ["command", "arrowRight"]
             },
-            "button" : 4,
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "shift" : false
+            "button": 4,
+            "command": true,
+            "control": false,
+            "option": false,
+            "shift": false
           },
           {
-            "action" : {
-              "keyPress" : [
-                "shift",
-                "command",
-                "]"
-              ]
+            "action": {
+              "keyPress": ["shift", "command", "]"]
             },
-            "button" : 4,
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "shift" : true
+            "button": 4,
+            "command": true,
+            "control": false,
+            "option": false,
+            "shift": true
           },
           {
-            "action" : {
-              "keyPress" : [
-                "command",
-                "="
-              ]
+            "action": {
+              "keyPress": ["command", "="]
             },
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "scroll" : "up",
-            "shift" : false
+            "command": true,
+            "control": false,
+            "option": false,
+            "scroll": "up",
+            "shift": false
           },
           {
-            "action" : {
-              "keyPress" : [
-                "command",
-                "-"
-              ]
+            "action": {
+              "keyPress": ["command", "-"]
             },
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "scroll" : "down",
-            "shift" : false
+            "command": true,
+            "control": false,
+            "option": false,
+            "scroll": "down",
+            "shift": false
           }
         ]
       },
-      "if" : {
-        "device" : {
-          "category" : "mouse",
-          "productID" : "0x94",
-          "productName" : "Orochi V2",
-          "serialNumber" : "000000000000",
-          "vendorID" : "0x1532"
+      "if": {
+        "device": {
+          "category": "mouse",
+          "productID": "0x94",
+          "productName": "Orochi V2",
+          "serialNumber": "000000000000",
+          "vendorID": "0x1532"
         }
       },
-      "pointer" : {
-        "acceleration" : 2,
-        "disableAcceleration" : false,
-        "speed" : 0.01
+      "pointer": {
+        "acceleration": 2,
+        "disableAcceleration": false,
+        "speed": 0.01
       },
-      "scrolling" : {
-        "acceleration" : {
-          "vertical" : 1
+      "scrolling": {
+        "acceleration": {
+          "vertical": 1
         },
-        "distance" : {
-          "vertical" : "auto"
+        "distance": {
+          "vertical": "auto"
         },
-        "modifiers" : {
-          "vertical" : {
-            "control" : {
-              "type" : "ignore"
+        "modifiers": {
+          "vertical": {
+            "control": {
+              "type": "ignore"
             },
-            "option" : {
-              "type" : "preventDefault"
+            "option": {
+              "type": "preventDefault"
             }
           }
         },
-        "reverse" : {
-          "vertical" : false
+        "reverse": {
+          "vertical": false
         },
-        "speed" : {
-          "vertical" : 15
+        "speed": {
+          "vertical": 15
         }
       }
     },
     {
-      "if" : {
-        "app" : "com.microsoft.VSCode",
-        "device" : {
-          "category" : "mouse",
-          "productID" : "0x94",
-          "productName" : "Orochi V2",
-          "serialNumber" : "000000000000",
-          "vendorID" : "0x1532"
+      "if": {
+        "app": "com.microsoft.VSCode",
+        "device": {
+          "category": "mouse",
+          "productID": "0x94",
+          "productName": "Orochi V2",
+          "serialNumber": "000000000000",
+          "vendorID": "0x1532"
         }
       },
-      "scrolling" : {
-        "acceleration" : {
-          "vertical" : 1
+      "scrolling": {
+        "acceleration": {
+          "vertical": 1
         },
-        "distance" : {
-          "vertical" : "auto"
+        "distance": {
+          "vertical": "auto"
         },
-        "reverse" : {
-          "vertical" : true
+        "reverse": {
+          "vertical": true
         },
-        "speed" : {
-          "vertical" : 0
+        "speed": {
+          "vertical": 0
         }
       }
     },
     {
-      "if" : {
-        "app" : "com.apple.ScreenContinuity",
-        "device" : {
-          "category" : "mouse",
-          "productID" : "0x94",
-          "productName" : "Orochi V2",
-          "serialNumber" : "000000000000",
-          "vendorID" : "0x1532"
+      "if": {
+        "app": "com.apple.ScreenContinuity",
+        "device": {
+          "category": "mouse",
+          "productID": "0x94",
+          "productName": "Orochi V2",
+          "serialNumber": "000000000000",
+          "vendorID": "0x1532"
         }
       },
-      "scrolling" : {
-        "acceleration" : {
-          "vertical" : 1
+      "scrolling": {
+        "acceleration": {
+          "vertical": 1
         },
-        "distance" : {
-          "vertical" : "36px"
+        "distance": {
+          "vertical": "36px"
         },
-        "reverse" : {
-          "vertical" : false
+        "reverse": {
+          "vertical": false
         },
-        "speed" : {
-          "vertical" : 0
+        "speed": {
+          "vertical": 0
         }
       }
     },
     {
-      "buttons" : {
-        "mappings" : [
+      "buttons": {
+        "mappings": [
           {
-            "action" : "missionControl.spaceLeft",
-            "button" : 3,
-            "command" : false,
-            "control" : false,
-            "option" : false,
-            "repeat" : true,
-            "shift" : false
+            "action": "missionControl.spaceLeft",
+            "button": 3,
+            "command": false,
+            "control": false,
+            "option": false,
+            "repeat": true,
+            "shift": false
           },
           {
-            "action" : {
-              "keyPress" : [
-                "command",
-                "arrowLeft"
-              ]
+            "action": {
+              "keyPress": ["command", "arrowLeft"]
             },
-            "button" : 3,
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "shift" : false
+            "button": 3,
+            "command": true,
+            "control": false,
+            "option": false,
+            "shift": false
           },
           {
-            "action" : {
-              "keyPress" : [
-                "shift",
-                "command",
-                "["
-              ]
+            "action": {
+              "keyPress": ["shift", "command", "["]
             },
-            "button" : 3,
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "shift" : true
+            "button": 3,
+            "command": true,
+            "control": false,
+            "option": false,
+            "shift": true
           },
           {
-            "action" : "missionControl.spaceRight",
-            "button" : 4,
-            "command" : false,
-            "control" : false,
-            "option" : false,
-            "repeat" : true,
-            "shift" : false
+            "action": "missionControl.spaceRight",
+            "button": 4,
+            "command": false,
+            "control": false,
+            "option": false,
+            "repeat": true,
+            "shift": false
           },
           {
-            "action" : {
-              "keyPress" : [
-                "command",
-                "arrowRight"
-              ]
+            "action": {
+              "keyPress": ["command", "arrowRight"]
             },
-            "button" : 4,
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "shift" : false
+            "button": 4,
+            "command": true,
+            "control": false,
+            "option": false,
+            "shift": false
           },
           {
-            "action" : {
-              "keyPress" : [
-                "shift",
-                "command",
-                "]"
-              ]
+            "action": {
+              "keyPress": ["shift", "command", "]"]
             },
-            "button" : 4,
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "shift" : true
+            "button": 4,
+            "command": true,
+            "control": false,
+            "option": false,
+            "shift": true
           },
           {
-            "action" : {
-              "keyPress" : [
-                "command",
-                "="
-              ]
+            "action": {
+              "keyPress": ["command", "="]
             },
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "scroll" : "up",
-            "shift" : false
+            "command": true,
+            "control": false,
+            "option": false,
+            "scroll": "up",
+            "shift": false
           },
           {
-            "action" : {
-              "keyPress" : [
-                "command",
-                "-"
-              ]
+            "action": {
+              "keyPress": ["command", "-"]
             },
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "scroll" : "down",
-            "shift" : false
+            "command": true,
+            "control": false,
+            "option": false,
+            "scroll": "down",
+            "shift": false
           }
         ]
       },
-      "if" : {
-        "device" : {
-          "category" : "mouse",
-          "productID" : "0x95",
-          "productName" : "Orochi V2",
-          "vendorID" : "0x1532"
+      "if": {
+        "device": {
+          "category": "mouse",
+          "productID": "0x95",
+          "productName": "Orochi V2",
+          "vendorID": "0x1532"
         }
       },
-      "pointer" : {
-        "acceleration" : 1,
-        "speed" : 0.01
+      "pointer": {
+        "acceleration": 1,
+        "speed": 0.01
       },
-      "scrolling" : {
-        "acceleration" : {
-          "vertical" : 1
+      "scrolling": {
+        "acceleration": {
+          "vertical": 1
         },
-        "distance" : {
-          "vertical" : "auto"
+        "distance": {
+          "vertical": "auto"
         },
-        "reverse" : {
-          "vertical" : false
+        "reverse": {
+          "vertical": false
         },
-        "speed" : {
-          "vertical" : 0
+        "speed": {
+          "vertical": 0
         }
       }
     },
     {
-      "buttons" : {
-        "mappings" : [
+      "buttons": {
+        "mappings": [
           {
-            "action" : "missionControl.spaceLeft",
-            "button" : 3,
-            "command" : false,
-            "control" : false,
-            "option" : false,
-            "shift" : false
+            "action": "missionControl.spaceLeft",
+            "button": 3,
+            "command": false,
+            "control": false,
+            "option": false,
+            "shift": false
           },
           {
-            "action" : {
-              "keyPress" : [
-                "shift",
-                "command",
-                "["
-              ]
+            "action": {
+              "keyPress": ["shift", "command", "["]
             },
-            "button" : 3,
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "shift" : false
+            "button": 3,
+            "command": true,
+            "control": false,
+            "option": false,
+            "shift": false
           },
           {
-            "action" : "missionControl.spaceRight",
-            "button" : 4,
-            "command" : false,
-            "control" : false,
-            "option" : false,
-            "shift" : false
+            "action": "missionControl.spaceRight",
+            "button": 4,
+            "command": false,
+            "control": false,
+            "option": false,
+            "shift": false
           },
           {
-            "action" : {
-              "keyPress" : [
-                "shift",
-                "command",
-                "]"
-              ]
+            "action": {
+              "keyPress": ["shift", "command", "]"]
             },
-            "button" : 4,
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "shift" : false
+            "button": 4,
+            "command": true,
+            "control": false,
+            "option": false,
+            "shift": false
           },
           {
-            "action" : "mouse.button.middle",
-            "button" : 5,
-            "command" : false,
-            "control" : false,
-            "option" : false,
-            "shift" : false
+            "action": "mouse.button.middle",
+            "button": 5,
+            "command": false,
+            "control": false,
+            "option": false,
+            "shift": false
           },
           {
-            "action" : "missionControl",
-            "button" : 7,
-            "command" : false,
-            "control" : false,
-            "option" : false,
-            "shift" : false
+            "action": "missionControl",
+            "button": 7,
+            "command": false,
+            "control": false,
+            "option": false,
+            "shift": false
           },
           {
-            "action" : {
-              "keyPress" : [
-                "command",
-                "-"
-              ]
+            "action": {
+              "keyPress": ["command", "-"]
             },
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "scroll" : "down",
-            "shift" : false
+            "command": true,
+            "control": false,
+            "option": false,
+            "scroll": "down",
+            "shift": false
           },
           {
-            "action" : {
-              "keyPress" : [
-                "command",
-                "="
-              ]
+            "action": {
+              "keyPress": ["command", "="]
             },
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "scroll" : "up",
-            "shift" : false
+            "command": true,
+            "control": false,
+            "option": false,
+            "scroll": "up",
+            "shift": false
           }
         ]
       },
-      "if" : {
-        "device" : {
-          "category" : "mouse",
-          "productID" : "0x132",
-          "productName" : "DEFT Pro TrackBall",
-          "serialNumber" : "0E5CB53E0F",
-          "vendorID" : "0x56e"
+      "if": {
+        "device": {
+          "category": "mouse",
+          "productID": "0x132",
+          "productName": "DEFT Pro TrackBall",
+          "serialNumber": "0E5CB53E0F",
+          "vendorID": "0x56e"
         }
       },
-      "pointer" : {
-        "acceleration" : 9,
-        "speed" : 0.03
+      "pointer": {
+        "acceleration": 9,
+        "speed": 0.03
       },
-      "scrolling" : {
-        "acceleration" : {
-          "vertical" : 1
+      "scrolling": {
+        "acceleration": {
+          "vertical": 1
         },
-        "distance" : {
-          "vertical" : "auto"
+        "distance": {
+          "vertical": "auto"
         },
-        "reverse" : {
-          "vertical" : false
+        "reverse": {
+          "vertical": false
         },
-        "speed" : {
-          "vertical" : 1
+        "speed": {
+          "vertical": 1
         }
       }
     },
     {
-      "buttons" : {
-        "mappings" : [
+      "buttons": {
+        "mappings": [
           {
-            "action" : {
-              "keyPress" : [
-                "command",
-                "h"
-              ]
+            "action": {
+              "keyPress": ["command", "h"]
             },
-            "button" : 2,
-            "command" : false,
-            "control" : false,
-            "option" : false,
-            "shift" : false
+            "button": 2,
+            "command": false,
+            "control": false,
+            "option": false,
+            "shift": false
           },
           {
-            "action" : "missionControl.spaceLeft",
-            "button" : 3,
-            "command" : false,
-            "control" : false,
-            "option" : false,
-            "repeat" : true,
-            "shift" : false
+            "action": "missionControl.spaceLeft",
+            "button": 3,
+            "command": false,
+            "control": false,
+            "option": false,
+            "repeat": true,
+            "shift": false
           },
           {
-            "action" : "missionControl.spaceRight",
-            "button" : 4,
-            "command" : false,
-            "control" : false,
-            "option" : false,
-            "repeat" : true,
-            "shift" : false
+            "action": "missionControl.spaceRight",
+            "button": 4,
+            "command": false,
+            "control": false,
+            "option": false,
+            "repeat": true,
+            "shift": false
           },
           {
-            "action" : "mouse.button.middle",
-            "button" : 5,
-            "command" : false,
-            "control" : false,
-            "option" : false,
-            "shift" : false
+            "action": "mouse.button.middle",
+            "button": 5,
+            "command": false,
+            "control": false,
+            "option": false,
+            "shift": false
           },
           {
-            "action" : "missionControl",
-            "button" : 7,
-            "command" : false,
-            "control" : false,
-            "option" : false,
-            "shift" : false
+            "action": "missionControl",
+            "button": 7,
+            "command": false,
+            "control": false,
+            "option": false,
+            "shift": false
           },
           {
-            "action" : {
-              "mouse.wheel.scrollRight" : "17.2px"
+            "action": {
+              "mouse.wheel.scrollRight": "17.2px"
             },
-            "command" : false,
-            "control" : false,
-            "option" : false,
-            "scroll" : "left",
-            "shift" : false
+            "command": false,
+            "control": false,
+            "option": false,
+            "scroll": "left",
+            "shift": false
           },
           {
-            "action" : {
-              "mouse.wheel.scrollLeft" : "17.3px"
+            "action": {
+              "mouse.wheel.scrollLeft": "17.3px"
             },
-            "command" : false,
-            "control" : false,
-            "option" : false,
-            "scroll" : "right",
-            "shift" : false
+            "command": false,
+            "control": false,
+            "option": false,
+            "scroll": "right",
+            "shift": false
           },
           {
-            "action" : {
-              "keyPress" : [
-                "command",
-                "="
-              ]
+            "action": {
+              "keyPress": ["command", "="]
             },
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "scroll" : "up",
-            "shift" : false
+            "command": true,
+            "control": false,
+            "option": false,
+            "scroll": "up",
+            "shift": false
           },
           {
-            "action" : {
-              "keyPress" : [
-                "command",
-                "-"
-              ]
+            "action": {
+              "keyPress": ["command", "-"]
             },
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "scroll" : "down",
-            "shift" : false
+            "command": true,
+            "control": false,
+            "option": false,
+            "scroll": "down",
+            "shift": false
           }
         ]
       },
-      "if" : {
-        "device" : {
-          "category" : "mouse",
-          "productID" : "0x133",
-          "productName" : "DEFT Pro TrackBall",
-          "serialNumber" : "1F355BA43014",
-          "vendorID" : "0x56e"
+      "if": {
+        "device": {
+          "category": "mouse",
+          "productID": "0x133",
+          "productName": "DEFT Pro TrackBall",
+          "serialNumber": "1F355BA43014",
+          "vendorID": "0x56e"
         }
       },
-      "pointer" : {
-        "acceleration" : 7,
-        "disableAcceleration" : false,
-        "speed" : 0.01
+      "pointer": {
+        "acceleration": 7,
+        "disableAcceleration": false,
+        "speed": 0.01
       },
-      "scrolling" : {
-        "acceleration" : {
-          "vertical" : 1
+      "scrolling": {
+        "acceleration": {
+          "vertical": 1
         },
-        "distance" : {
-          "vertical" : "auto"
+        "distance": {
+          "vertical": "auto"
         },
-        "reverse" : {
-          "vertical" : false
+        "reverse": {
+          "vertical": false
         },
-        "speed" : {
-          "vertical" : 0
+        "speed": {
+          "vertical": 0
         }
       }
     },
     {
-      "if" : {
-        "device" : {
-          "category" : "trackpad",
-          "productID" : "0x0",
-          "productName" : "Apple Internal Keyboard \/ Trackpad",
-          "vendorID" : "0x0"
+      "if": {
+        "device": {
+          "category": "trackpad",
+          "productID": "0x0",
+          "productName": "Apple Internal Keyboard / Trackpad",
+          "vendorID": "0x0"
         }
       },
-      "pointer" : {
-        "acceleration" : 5,
-        "speed" : 0.01
+      "pointer": {
+        "acceleration": 5,
+        "speed": 0.01
       },
-      "scrolling" : {
-        "acceleration" : {
-          "vertical" : 4
+      "scrolling": {
+        "acceleration": {
+          "vertical": 4
         },
-        "distance" : {
-          "vertical" : "auto"
+        "distance": {
+          "vertical": "auto"
         },
-        "modifiers" : {
-          "vertical" : {
-            "control" : {
-              "scale" : 5,
-              "type" : "changeSpeed"
+        "modifiers": {
+          "vertical": {
+            "control": {
+              "scale": 5,
+              "type": "changeSpeed"
             },
-            "option" : {
-              "type" : "preventDefault"
+            "option": {
+              "type": "preventDefault"
             }
           }
         },
-        "reverse" : {
-          "vertical" : false
+        "reverse": {
+          "vertical": false
         },
-        "speed" : {
-          "vertical" : 0
+        "speed": {
+          "vertical": 0
         }
       }
     },
     {
-      "if" : {
-        "app" : "com.microsoft.VSCode",
-        "device" : {
-          "category" : "trackpad",
-          "productID" : "0x0",
-          "productName" : "Apple Internal Keyboard \/ Trackpad",
-          "vendorID" : "0x0"
+      "if": {
+        "app": "com.microsoft.VSCode",
+        "device": {
+          "category": "trackpad",
+          "productID": "0x0",
+          "productName": "Apple Internal Keyboard / Trackpad",
+          "vendorID": "0x0"
         }
       },
-      "scrolling" : {
-        "acceleration" : {
-          "vertical" : 0.8
+      "scrolling": {
+        "acceleration": {
+          "vertical": 0.8
         }
       }
     },
     {
-      "if" : {
-        "app" : "com.googlecode.iterm2",
-        "device" : {
-          "category" : "trackpad",
-          "productID" : "0x0",
-          "productName" : "Apple Internal Keyboard \/ Trackpad",
-          "vendorID" : "0x0"
+      "if": {
+        "app": "com.googlecode.iterm2",
+        "device": {
+          "category": "trackpad",
+          "productID": "0x0",
+          "productName": "Apple Internal Keyboard / Trackpad",
+          "vendorID": "0x0"
         }
       },
-      "scrolling" : {
-        "acceleration" : {
-          "vertical" : 1
+      "scrolling": {
+        "acceleration": {
+          "vertical": 1
         },
-        "distance" : {
-          "vertical" : "auto"
+        "distance": {
+          "vertical": "auto"
         },
-        "speed" : {
-          "vertical" : 0
+        "speed": {
+          "vertical": 0
         }
       }
     },
     {
-      "if" : {
-        "device" : {
-          "category" : "mouse",
-          "productID" : "0x27da",
-          "productName" : "Karabiner DriverKit VirtualHIDPointing 1.7.0",
-          "serialNumber" : "pqrs.org:Karabiner-DriverKit-VirtualHIDPointing",
-          "vendorID" : "0x16c0"
+      "if": {
+        "device": {
+          "category": "mouse",
+          "productID": "0x27da",
+          "productName": "Karabiner DriverKit VirtualHIDPointing 1.7.0",
+          "serialNumber": "pqrs.org:Karabiner-DriverKit-VirtualHIDPointing",
+          "vendorID": "0x16c0"
         }
       },
-      "pointer" : {
-        "acceleration" : 2,
-        "disableAcceleration" : false,
-        "speed" : 0.01
+      "pointer": {
+        "acceleration": 2,
+        "disableAcceleration": false,
+        "speed": 0.01
       },
-      "scrolling" : {
-        "acceleration" : {
-          "vertical" : 0.14
-        }
-      }
-    },
-    {
-      "if" : {
-        "device" : {
-          "category" : "trackpad",
-          "productID" : "0x265",
-          "productName" : "Magic Trackpad",
-          "serialNumber" : "c0-95-6d-05-6d-1e",
-          "vendorID" : "0x4c"
-        }
-      },
-      "pointer" : {
-        "acceleration" : 20,
-        "speed" : 0.03
-      },
-      "scrolling" : {
-        "acceleration" : {
-          "vertical" : 3
+      "scrolling": {
+        "acceleration": {
+          "vertical": 0.14
         }
       }
     },
     {
-      "if" : {
-        "device" : {
-          "category" : "trackpad",
-          "productID" : "0x265",
-          "productName" : "Magic Trackpad",
-          "serialNumber" : "CC2403405GS27CRD5",
-          "vendorID" : "0x5ac"
+      "if": {
+        "device": {
+          "category": "trackpad",
+          "productID": "0x265",
+          "productName": "Magic Trackpad",
+          "serialNumber": "c0-95-6d-05-6d-1e",
+          "vendorID": "0x4c"
         }
       },
-      "pointer" : {
-        "acceleration" : 1.3,
-        "speed" : 0.01
+      "pointer": {
+        "acceleration": 20,
+        "speed": 0.03
       },
-      "scrolling" : {
-        "acceleration" : {
-          "vertical" : 2
+      "scrolling": {
+        "acceleration": {
+          "vertical": 3
+        }
+      }
+    },
+    {
+      "if": {
+        "device": {
+          "category": "trackpad",
+          "productID": "0x265",
+          "productName": "Magic Trackpad",
+          "serialNumber": "CC2403405GS27CRD5",
+          "vendorID": "0x5ac"
+        }
+      },
+      "pointer": {
+        "acceleration": 1.3,
+        "speed": 0.01
+      },
+      "scrolling": {
+        "acceleration": {
+          "vertical": 2
         },
-        "distance" : {
-          "vertical" : "auto"
+        "distance": {
+          "vertical": "auto"
         },
-        "modifiers" : {
-          "vertical" : {
-            "control" : {
-              "scale" : 6,
-              "type" : "changeSpeed"
+        "modifiers": {
+          "vertical": {
+            "control": {
+              "scale": 6,
+              "type": "changeSpeed"
             }
           }
         },
-        "speed" : {
-          "vertical" : 0
+        "speed": {
+          "vertical": 0
         }
       }
     },
     {
-      "if" : {
-        "device" : {
-          "category" : "trackpad",
-          "productID" : "0x265",
-          "productName" : "elTrackpad",
-          "serialNumber" : "C0:95:6D:05:6D:1E",
-          "vendorID" : "0x4c"
+      "if": {
+        "device": {
+          "category": "trackpad",
+          "productID": "0x265",
+          "productName": "elTrackpad",
+          "serialNumber": "C0:95:6D:05:6D:1E",
+          "vendorID": "0x4c"
         }
       },
-      "pointer" : {
-        "acceleration" : 1.1,
-        "speed" : 0.01
+      "pointer": {
+        "acceleration": 1.1,
+        "speed": 0.01
       },
-      "scrolling" : {
-        "acceleration" : {
-          "vertical" : 2
+      "scrolling": {
+        "acceleration": {
+          "vertical": 2
         },
-        "modifiers" : {
-          "vertical" : {
-            "control" : {
-              "scale" : 5,
-              "type" : "changeSpeed"
+        "modifiers": {
+          "vertical": {
+            "control": {
+              "scale": 5,
+              "type": "changeSpeed"
             }
           }
         }
       }
     },
     {
-      "buttons" : {
-        "mappings" : [
+      "buttons": {
+        "mappings": [
           {
-            "action" : {
-              "keyPress" : [
-                "command",
-                "="
-              ]
+            "action": {
+              "keyPress": ["command", "="]
             },
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "scroll" : "up",
-            "shift" : false
+            "command": true,
+            "control": false,
+            "option": false,
+            "scroll": "up",
+            "shift": false
           },
           {
-            "action" : {
-              "keyPress" : [
-                "command",
-                "-"
-              ]
+            "action": {
+              "keyPress": ["command", "-"]
             },
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "scroll" : "down",
-            "shift" : false
+            "command": true,
+            "control": false,
+            "option": false,
+            "scroll": "down",
+            "shift": false
           }
         ]
       },
-      "if" : {
-        "device" : {
-          "category" : "mouse",
-          "productID" : "0x27da",
-          "productName" : "Karabiner DriverKit VirtualHIDPointing 1.8.0",
-          "serialNumber" : "pqrs.org:Karabiner-DriverKit-VirtualHIDPointing",
-          "vendorID" : "0x16c0"
+      "if": {
+        "device": {
+          "category": "mouse",
+          "productID": "0x27da",
+          "productName": "Karabiner DriverKit VirtualHIDPointing 1.8.0",
+          "serialNumber": "pqrs.org:Karabiner-DriverKit-VirtualHIDPointing",
+          "vendorID": "0x16c0"
         }
       },
-      "pointer" : {
-        "acceleration" : 2.5144
+      "pointer": {
+        "acceleration": 2.5144
       },
-      "scrolling" : {
-        "acceleration" : {
-          "vertical" : 1
+      "scrolling": {
+        "acceleration": {
+          "vertical": 1
         }
       }
     },
     {
-      "if" : {
-        "device" : {
-          "category" : "mouse",
-          "productID" : "0x269",
-          "productName" : "Magic Mouse",
-          "serialNumber" : "00:81:2A:94:F6:8E",
-          "vendorID" : "0x4c"
+      "if": {
+        "device": {
+          "category": "mouse",
+          "productID": "0x269",
+          "productName": "Magic Mouse",
+          "serialNumber": "00:81:2A:94:F6:8E",
+          "vendorID": "0x4c"
         }
       },
-      "pointer" : {
-        "acceleration" : 2.35,
-        "disableAcceleration" : false,
-        "speed" : 0.01
+      "pointer": {
+        "acceleration": 2.35,
+        "disableAcceleration": false,
+        "speed": 0.01
       },
-      "scrolling" : {
-        "acceleration" : {
-          "vertical" : 2
+      "scrolling": {
+        "acceleration": {
+          "vertical": 2
         },
-        "speed" : {
-          "vertical" : 2
+        "speed": {
+          "vertical": 2
         }
       }
     },
     {
-      "buttons" : {
-        "mappings" : [
+      "buttons": {
+        "mappings": [
           {
-            "action" : {
-              "keyPress" : [
-                "shift",
-                "command",
-                "]"
-              ]
+            "action": {
+              "keyPress": ["shift", "command", "]"]
             },
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "scroll" : "left",
-            "shift" : true
+            "command": true,
+            "control": false,
+            "option": false,
+            "scroll": "left",
+            "shift": true
           },
           {
-            "action" : {
-              "keyPress" : [
-                "shift",
-                "command",
-                "["
-              ]
+            "action": {
+              "keyPress": ["shift", "command", "["]
             },
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "scroll" : "right",
-            "shift" : true
+            "command": true,
+            "control": false,
+            "option": false,
+            "scroll": "right",
+            "shift": true
           }
         ],
-        "universalBackForward" : true
+        "universalBackForward": true
       },
-      "if" : {
-        "device" : {
-          "category" : "mouse",
-          "productID" : "0x269",
-          "productName" : "Sergey’s Magic Mouse",
-          "serialNumber" : "00:81:2A:94:F6:8E",
-          "vendorID" : "0x4c"
+      "if": {
+        "device": {
+          "category": "mouse",
+          "productID": "0x269",
+          "productName": "Sergey’s Magic Mouse",
+          "serialNumber": "00:81:2A:94:F6:8E",
+          "vendorID": "0x4c"
         }
       },
-      "pointer" : {
-        "acceleration" : 0.3475,
-        "disableAcceleration" : false,
-        "speed" : 0.01
+      "pointer": {
+        "acceleration": 0.3475,
+        "disableAcceleration": false,
+        "speed": 0.01
       },
-      "scrolling" : {
-        "acceleration" : {
-          "vertical" : 1.5
+      "scrolling": {
+        "acceleration": {
+          "vertical": 1.5
         },
-        "distance" : {
-          "vertical" : "auto"
+        "distance": {
+          "vertical": "auto"
         },
-        "modifiers" : {
-          "vertical" : {
-            "control" : {
-              "scale" : 3.5,
-              "type" : "changeSpeed"
+        "modifiers": {
+          "vertical": {
+            "control": {
+              "scale": 3.5,
+              "type": "changeSpeed"
             }
           }
         },
-        "speed" : {
-          "vertical" : 3
+        "speed": {
+          "vertical": 3
         }
       }
     },
     {
-      "buttons" : {
-        "clickDebouncing" : {
-          "timeout" : 0
+      "buttons": {
+        "clickDebouncing": {
+          "timeout": 0
         },
-        "mappings" : [
+        "mappings": [
           {
-            "action" : {
-              "keyPress" : [
-                "command",
-                "-"
-              ]
+            "action": {
+              "keyPress": ["command", "-"]
             },
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "scroll" : "down",
-            "shift" : false
+            "command": true,
+            "control": false,
+            "option": false,
+            "scroll": "down",
+            "shift": false
           },
           {
-            "action" : {
-              "keyPress" : [
-                "command",
-                "="
-              ]
+            "action": {
+              "keyPress": ["command", "="]
             },
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "scroll" : "up",
-            "shift" : false
+            "command": true,
+            "control": false,
+            "option": false,
+            "scroll": "up",
+            "shift": false
           },
           {
-            "action" : {
-              "keyPress" : [
-                "shift",
-                "command",
-                "["
-              ]
+            "action": {
+              "keyPress": ["shift", "command", "["]
             },
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "scroll" : "left",
-            "shift" : true
+            "command": true,
+            "control": false,
+            "option": false,
+            "scroll": "left",
+            "shift": true
           },
           {
-            "action" : {
-              "keyPress" : [
-                "shift",
-                "command",
-                "]"
-              ]
+            "action": {
+              "keyPress": ["shift", "command", "]"]
             },
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "scroll" : "right",
-            "shift" : true
+            "command": true,
+            "control": false,
+            "option": false,
+            "scroll": "right",
+            "shift": true
           }
         ]
       },
-      "if" : {
-        "device" : {
-          "category" : "mouse",
-          "productID" : "0xb036",
-          "productName" : "Pebble M350s",
-          "serialNumber" : "F1F33511",
-          "vendorID" : "0x46d"
+      "if": {
+        "device": {
+          "category": "mouse",
+          "productID": "0xb036",
+          "productName": "Pebble M350s",
+          "serialNumber": "F1F33511",
+          "vendorID": "0x46d"
         }
       },
-      "pointer" : {
-        "acceleration" : 3,
-        "speed" : 0.03
+      "pointer": {
+        "acceleration": 3,
+        "speed": 0.03
       },
-      "scrolling" : {
-        "acceleration" : {
-          "vertical" : 2
+      "scrolling": {
+        "acceleration": {
+          "vertical": 2
         },
-        "reverse" : {
-          "vertical" : false
+        "reverse": {
+          "vertical": false
         },
-        "speed" : {
-          "vertical" : 128
+        "speed": {
+          "vertical": 128
         }
       }
     },
     {
-      "if" : {
-        "device" : {
-          "category" : "mouse",
-          "productID" : "0xb036",
-          "productName" : "V-Pebble M350s",
-          "vendorID" : "0x46d"
+      "if": {
+        "device": {
+          "category": "mouse",
+          "productID": "0xb036",
+          "productName": "V-Pebble M350s",
+          "vendorID": "0x46d"
         }
       },
-      "scrolling" : {
-        "reverse" : {
-          "vertical" : true
+      "scrolling": {
+        "reverse": {
+          "vertical": true
         }
       }
     },
     {
-      "if" : {
-        "device" : {
-          "category" : "trackpad",
-          "productID" : "0x265",
-          "productName" : "Callisto",
-          "serialNumber" : "C0:95:6D:05:6D:1E",
-          "vendorID" : "0x4c"
+      "if": {
+        "device": {
+          "category": "trackpad",
+          "productID": "0x265",
+          "productName": "Callisto",
+          "serialNumber": "C0:95:6D:05:6D:1E",
+          "vendorID": "0x4c"
         }
       },
-      "pointer" : {
-        "acceleration" : 0.98,
-        "disableAcceleration" : false,
-        "speed" : 0.01
+      "pointer": {
+        "acceleration": 0.98,
+        "disableAcceleration": false,
+        "speed": 0.01
       }
     }
   ]
