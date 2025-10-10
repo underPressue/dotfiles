@@ -163,6 +163,5 @@ export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
 
 # python
 export PATH="$HOME/Library/Python/3.11/bin:$PATH"
-alias claude="/Users/elrocie/.claude/local/claude"
 
 [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
