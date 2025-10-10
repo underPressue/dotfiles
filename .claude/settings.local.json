@@ -16,7 +16,16 @@
       "Bash(npm run lint:*)",
       "Bash(npx eslint:*)",
       "Bash(npm run test:*)",
-      "Bash(sed:*)"
+      "Bash(sed:*)",
+      "Read(//Users/elrocie/**)",
+      "Read(//Users/elrocie/.claude/**)",
+      "Bash(git clone:*)",
+      "Bash(git config:*)",
+      "Bash(GIT_TRACE=1 timeout 120 git clone https://github.com/zbirenbaum/copilot.lua.git)",
+      "Bash(ping:*)",
+      "Bash(git restore:*)",
+      "Bash(git reset:*)",
+      "Bash(test:*)"
     ],
     "deny": []
   }
