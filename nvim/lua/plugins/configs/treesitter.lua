@@ -7,6 +7,7 @@ local options = {
     "css",
     "javascript",
     "typescript",
+    "vue",
     "tsx",
     "c",
     "markdown",
