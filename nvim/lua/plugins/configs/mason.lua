@@ -11,6 +11,7 @@ return {
     "html",
     "ts_ls",
     "deno",
+    "vue-language-server",
     "prettier/vim-prettier",
 
     -- c/cpp stuff
