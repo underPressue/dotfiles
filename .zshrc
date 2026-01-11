@@ -165,3 +165,6 @@ export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
 export PATH="$HOME/Library/Python/3.11/bin:$PATH"
 
 [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
+
+# Added by Antigravity
+export PATH="/Users/elrocie/.antigravity/antigravity/bin:$PATH"
