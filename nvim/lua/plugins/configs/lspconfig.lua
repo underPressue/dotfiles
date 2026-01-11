@@ -42,88 +42,75 @@ M.capabilities.textDocument.completion.completionItem = {
   },
 }
 
-local servers = { "ts_ls", "cssls", "html" };
+vim.lsp.config.html = {
+  cmd = { "vscode-html-language-server", "--stdio" },
+  filetypes = { "html" },
+  root_markers = { ".git" },
+  on_attach = M.on_attach,
+  on_init = M.on_init,
+  capabilities = M.capabilities,
+}
 
-for _, lsp in ipairs(servers) do
-  require('lspconfig')[lsp].setup {
-    on_attach = M.on_attach,
-    on_init = M.on_init,
-    capabilities = M.capabilities,
-  }
-end
-
-require("lspconfig").ts_ls.setup({
-  -- Needed for inlayHints. Merge this table with your settings or copy
-  -- it from the source if you want to add your own init_options.
+vim.lsp.config.ts_ls = {
+  cmd = { "typescript-language-server", "--stdio" },
+  filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "typescriptvue" },
+  root_markers = { "package.json", "tsconfig.json", "jsconfig.json", ".git" },
   init_options = require("nvim-lsp-ts-utils").init_options,
-  --
+  on_init = M.on_init,
   on_attach = function(client, bufnr)
     local ts_utils = require("nvim-lsp-ts-utils")
 
-    -- defaults
     ts_utils.setup({
       debug = false,
       disable_commands = false,
       enable_import_on_completion = false,
 
-      -- import all
-      import_all_timeout = 5000, -- ms
-      -- lower numbers = higher priority
+      import_all_timeout = 5000,
       import_all_priorities = {
-        same_file = 1,      -- add to existing import statement
-        local_files = 2,    -- git files or files with relative path markers
-        buffer_content = 3, -- loaded buffer content
-        buffers = 4,        -- loaded buffer names
+        same_file = 1,
+        local_files = 2,
+        buffer_content = 3,
+        buffers = 4,
       },
       import_all_scan_buffers = 100,
       import_all_select_source = false,
-      -- if false will avoid organizing imports
       always_organize_imports = true,
 
-      -- filter diagnostics
       filter_out_diagnostics_by_severity = {},
       filter_out_diagnostics_by_code = {},
 
-      -- inlay hints
       auto_inlay_hints = true,
       inlay_hints_highlight = "Comment",
-      inlay_hints_priority = 200, -- priority of the hint extmarks
-      inlay_hints_throttle = 150, -- throttle the inlay hint request
-      inlay_hints_format = {      -- format options for individual hint kind
+      inlay_hints_priority = 200,
+      inlay_hints_throttle = 150,
+      inlay_hints_format = {
         Type = {},
         Parameter = {},
         Enum = {},
-        -- Example format customization for `Type` kind:
-        -- Type = {
-        --     highlight = "Comment",
-        --     text = function(text)
-        --         return "->" .. text:sub(2)
-        --     end,
-        -- },
       },
 
-      -- update imports on file move
       update_imports_on_move = false,
       require_confirmation_on_move = false,
       watch_dir = nil,
     })
 
-    -- required to fix code action ranges and filter diagnostics
     ts_utils.setup_client(client)
 
-    -- no default maps, so you may want to define some here
     local opts = { silent = true }
     vim.api.nvim_buf_set_keymap(bufnr, "n", "gs", ":TSLspOrganize<CR>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", ":TSLspRenameFile<CR>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", ":TSLspImportAll<CR>", opts)
   end,
-})
+  capabilities = M.capabilities,
+}
 
-require("lspconfig").lua_ls.setup {
+vim.lsp.config.lua_ls = {
+  cmd = { "lua-language-server" },
+  filetypes = { "lua" },
+  root_markers = { ".git" },
   on_init = M.on_init,
   on_attach = M.on_attach,
   capabilities = M.capabilities,
-
   settings = {
     Lua = {
       diagnostics = {
@@ -143,8 +130,10 @@ require("lspconfig").lua_ls.setup {
   },
 }
 
--- CSS/SCSS LSP configuration
-require("lspconfig").cssls.setup {
+vim.lsp.config.cssls = {
+  cmd = { "vscode-css-language-server", "--stdio" },
+  filetypes = { "css", "scss", "less" },
+  root_markers = { ".git" },
   on_init = M.on_init,
   on_attach = M.on_attach,
   capabilities = M.capabilities,
@@ -169,5 +158,21 @@ require("lspconfig").cssls.setup {
     },
   },
 }
+
+vim.lsp.config.vue_ls = {
+  cmd = { "vue-language-server", "--stdio" },
+  filetypes = { "vue" },
+  root_markers = { "package.json", ".git" },
+  on_init = M.on_init,
+  on_attach = M.on_attach,
+  capabilities = M.capabilities,
+  init_options = {
+    typescript = {
+      tsdk = vim.fn.expand("~/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/lib")
+    },
+  },
+}
+
+vim.lsp.enable({ "html", "ts_ls", "lua_ls", "cssls", "vue_ls" })
 
 return M
