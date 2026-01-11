@@ -27,7 +27,9 @@
       "Bash(git reset:*)",
       "Bash(test:*)",
       "Bash(git checkout:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(git rebase:*)"
     ],
     "deny": []
   }
