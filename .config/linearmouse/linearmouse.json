@@ -1,5 +1,5 @@
 {
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.1",
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.2",
   "schemes" : [
     {
       "buttons" : {
@@ -1368,6 +1368,64 @@
       }
     },
     {
+      "buttons" : {
+        "mappings" : [
+          {
+            "action" : {
+              "keyPress" : [
+                "shift",
+                "command",
+                "["
+              ]
+            },
+            "button" : 3,
+            "command" : false,
+            "control" : false,
+            "option" : false,
+            "shift" : false
+          },
+          {
+            "action" : {
+              "keyPress" : [
+                "shift",
+                "command",
+                "]"
+              ]
+            },
+            "button" : 4,
+            "command" : false,
+            "control" : false,
+            "option" : false,
+            "shift" : false
+          },
+          {
+            "action" : {
+              "keyPress" : [
+                "command",
+                "-"
+              ]
+            },
+            "command" : true,
+            "control" : false,
+            "option" : false,
+            "scroll" : "down",
+            "shift" : false
+          },
+          {
+            "action" : {
+              "keyPress" : [
+                "command",
+                "="
+              ]
+            },
+            "command" : true,
+            "control" : false,
+            "option" : false,
+            "scroll" : "up",
+            "shift" : false
+          }
+        ]
+      },
       "if" : {
         "device" : {
           "category" : "mouse",
@@ -1377,6 +1435,7 @@
         }
       },
       "pointer" : {
+        "acceleration" : 2,
         "speed" : 0.01
       }
     }
