@@ -29,7 +29,9 @@
       "Bash(git checkout:*)",
       "Bash(git add:*)",
       "WebFetch(domain:github.com)",
-      "Bash(git rebase:*)"
+      "Bash(git rebase:*)",
+      "WebSearch",
+      "Bash(git rm:*)"
     ],
     "deny": []
   }
