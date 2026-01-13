@@ -1,1 +1,3 @@
-return "prettier/vim-prettier"
+return {
+  "prettier/vim-prettier"
+}

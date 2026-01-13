@@ -12,7 +12,7 @@ end
 
 dofile(vim.g.base46_cache .. "defaults")
 vim.opt.rtp:prepend(lazypath)
-require "plugins"
+require "lazy_setup"
 
 -- some other stuff
 -- make relative numbers default
