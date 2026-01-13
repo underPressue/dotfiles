@@ -44,6 +44,8 @@ local default_plugins = {
   require("plugins.prisma"),
   require("plugins.snacks"),
   require("plugins.spectre"),
+  require("plugins.better-ts-errors"),
+  require("plugins.codediff")
 }
 
 local config = require("core.utils").load_config()
