@@ -7,72 +7,16 @@
           {
             "action" : {
               "keyPress" : [
-                "command",
-                "0"
-              ]
-            },
-            "button" : 2,
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "shift" : false
-          },
-          {
-            "action" : "missionControl.spaceLeft",
-            "button" : 3,
-            "command" : false,
-            "control" : false,
-            "option" : false,
-            "repeat" : true,
-            "shift" : false
-          },
-          {
-            "action" : {
-              "keyPress" : [
-                "command",
-                "arrowLeft"
-              ]
-            },
-            "button" : 3,
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "shift" : false
-          },
-          {
-            "action" : {
-              "keyPress" : [
                 "shift",
                 "command",
                 "["
               ]
             },
             "button" : 3,
-            "command" : true,
-            "control" : false,
-            "option" : false,
-            "shift" : true
-          },
-          {
-            "action" : "missionControl.spaceRight",
-            "button" : 4,
             "command" : false,
             "control" : false,
             "option" : false,
             "repeat" : true,
-            "shift" : false
-          },
-          {
-            "action" : {
-              "keyPress" : [
-                "command",
-                "arrowRight"
-              ]
-            },
-            "button" : 4,
-            "command" : true,
-            "control" : false,
-            "option" : false,
             "shift" : false
           },
           {
@@ -84,10 +28,11 @@
               ]
             },
             "button" : 4,
-            "command" : true,
+            "command" : false,
             "control" : false,
             "option" : false,
-            "shift" : true
+            "repeat" : true,
+            "shift" : false
           },
           {
             "action" : {
@@ -128,7 +73,7 @@
       "pointer" : {
         "acceleration" : 2,
         "disableAcceleration" : false,
-        "speed" : 0.12
+        "speed" : 0.14
       },
       "scrolling" : {
         "acceleration" : {
