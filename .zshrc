@@ -119,6 +119,7 @@ alias ls="eza -1 -h --icons=always --no-permissions --no-user -T -a --level 1"
 alias vi="nvim"
 alias td="turbo dev"
 alias lg="lazygit"
+alias fi="yazi"
 alias insomnia="sudo pmset disablesleep 1"
 alias sleep="sudo pmset disablesleep 0"
 
