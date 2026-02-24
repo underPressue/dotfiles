@@ -119,7 +119,8 @@ alias ls="eza -1 -h --icons=always --no-permissions --no-user -T -a --level 1"
 alias vi="nvim"
 alias td="turbo dev"
 alias lg="lazygit"
-alias fi="yazi"
+alias yz="yazi"
+alias cld="claude --dangerously-skip-permissions"
 alias insomnia="sudo pmset disablesleep 1"
 alias sleep="sudo pmset disablesleep 0"
 
@@ -165,7 +166,8 @@ export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
 # python
 export PATH="$HOME/Library/Python/3.11/bin:$PATH"
 
-[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
-
 # Added by Antigravity
 export PATH="/Users/elrocie/.antigravity/antigravity/bin:$PATH"
+
+# Added by Midas
+export PATH="/Users/elrocie/Work/midas/bin:$PATH"
