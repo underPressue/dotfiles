@@ -119,7 +119,8 @@ alias ls="eza -1 -h --icons=always --no-permissions --no-user -T -a --level 1"
 alias vi="nvim"
 alias td="turbo dev"
 alias lg="lazygit"
-alias fi="yazi"
+alias yi="yazi"
+alias cld="claude --dangerously-skip-permissions"
 alias insomnia="sudo pmset disablesleep 1"
 alias sleep="sudo pmset disablesleep 0"
 
@@ -135,14 +136,12 @@ export LC_ALL=en_US.UTF-8
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="$HOME/.poetry/bin:$PATH"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# nvm is loaded at the end of this file so it takes PATH priority
 
 PATH=~/.console-ninja/.bin:$PATH
 export PATH="$HOME/.local/bin:$PATH"
 
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+# . /opt/homebrew/opt/asdf/libexec/asdf.sh  # No longer needed in asdf 0.16+
 
 # To customize prompt, run `p10k configure` or edit ~/dotfiles/.p10k.zsh.
 [[ ! -f ~/dotfiles/.p10k.zsh ]] || source ~/dotfiles/.p10k.zsh
@@ -160,7 +159,7 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
+# export PATH="/opt/homebrew/opt/node@20/bin:$PATH"  # disabled in favor of nvm
 
 # python
 export PATH="$HOME/Library/Python/3.11/bin:$PATH"
@@ -169,3 +168,8 @@ export PATH="$HOME/Library/Python/3.11/bin:$PATH"
 
 # Added by Antigravity
 export PATH="/Users/elrocie/.antigravity/antigravity/bin:$PATH"
+
+# nvm (loaded last to ensure it takes PATH priority)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
