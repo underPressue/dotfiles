@@ -119,7 +119,7 @@ alias ls="eza -1 -h --icons=always --no-permissions --no-user -T -a --level 1"
 alias vi="nvim"
 alias td="turbo dev"
 alias lg="lazygit"
-alias yi="yazi"
+alias yz="yazi"
 alias cld="claude --dangerously-skip-permissions"
 alias insomnia="sudo pmset disablesleep 1"
 alias sleep="sudo pmset disablesleep 0"
@@ -164,12 +164,8 @@ esac
 # python
 export PATH="$HOME/Library/Python/3.11/bin:$PATH"
 
-[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
-
 # Added by Antigravity
 export PATH="/Users/elrocie/.antigravity/antigravity/bin:$PATH"
 
-# nvm (loaded last to ensure it takes PATH priority)
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+# Added by Midas
+export PATH="/Users/elrocie/Work/midas/bin:$PATH"

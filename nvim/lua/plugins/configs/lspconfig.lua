@@ -173,6 +173,6 @@ vim.lsp.config.vue_ls = {
   },
 }
 
-vim.lsp.enable({ "html", "ts_ls", "lua_ls", "cssls", "vue_ls" })
+vim.lsp.enable({ "html", "ts_ls", "lua_ls", "cssls", "vue_ls", "copilot" })
 
 return M
