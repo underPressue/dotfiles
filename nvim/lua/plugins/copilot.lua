@@ -4,7 +4,18 @@ return {
     enabled = true,
     event = "VeryLazy",
     dependencies = { "github/copilot.vim" },
-    opts = {},
+    opts = {
+      cli = {
+        win = {
+          layout = "float",
+          float = {
+            width = 0.9,
+            height = 0.7,
+            border = "rounded",
+          },
+        },
+      },
+    },
     keys = {
       {
         "<tab>",
