@@ -3,7 +3,7 @@ local merge_tb = vim.tbl_deep_extend
 
 M.load_config = function()
   local config = require "core.default_config"
-  local chadrc_path = vim.api.nvim_get_runtime_file("lua/custom/chadrc.lua", false)[1]
+  local chadrc_path = vim.api.nvim_get_runtime_file("lua/core/chadrc.lua", false)[1]
 
   if chadrc_path then
     local chadrc = dofile(chadrc_path)
