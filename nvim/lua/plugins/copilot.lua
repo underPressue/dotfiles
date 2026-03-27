@@ -30,10 +30,27 @@ return {
         expr = true,
         desc = "Goto/Apply Next Edit Suggestion",
       },
-      { "<c-.>", function() require("sidekick.cli").toggle() end, desc = "Toggle Sidekick CLI" },
+      { "<c-t>",      function() require("sidekick.cli").toggle() end, desc = "Toggle Sidekick CLI", mode = { "n", "t" } },
       { "<leader>aa", function() require("sidekick.cli").toggle() end, desc = "Toggle Sidekick CLI" },
       { "<leader>as", function() require("sidekick.cli").select() end, desc = "Select CLI tool" },
       { "<leader>ap", function() require("sidekick.cli").prompt() end, desc = "Select prompt" },
+      {
+        "<leader>at",
+        function() require("sidekick.cli").send({ msg = "{this}" }) end,
+        mode = { "x", "n" },
+        desc = "Send This",
+      },
+      {
+        "<leader>af",
+        function() require("sidekick.cli").send({ msg = "{file}" }) end,
+        desc = "Send File",
+      },
+      {
+        "<leader>av",
+        function() require("sidekick.cli").send({ msg = "{selection}" }) end,
+        mode = { "x" },
+        desc = "Send Visual Selection",
+      },
     },
   },
   {
