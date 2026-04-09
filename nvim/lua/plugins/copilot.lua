@@ -6,8 +6,9 @@ return {
     dependencies = { "github/copilot.vim" },
     opts = {
       cli = {
-        tools = {
-          claude = { cmd = { "claude", "--dangerously-skip-permissions" } },
+        claude = {
+          cmd = "claude",
+          args = { "--dangerously-skip-permissions" },
         },
         win = {
           layout = "float",
