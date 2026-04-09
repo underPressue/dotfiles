@@ -123,6 +123,7 @@ alias yz="yazi"
 alias cld="claude --dangerously-skip-permissions"
 alias insomnia="sudo pmset disablesleep 1"
 alias sleep="sudo pmset disablesleep 0"
+alias jupiter="ssh Jupiter"
 
 # turborepo
 export PATH="$PATH:/Users/elrocie/.yarn/bin"
