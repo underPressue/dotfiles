@@ -1,2 +1,7 @@
 .aider*
 .config/linearmouse/
+
+!.claude
+!.claude/**
+.claude/settings.local.json
+.claude/.DS_Store

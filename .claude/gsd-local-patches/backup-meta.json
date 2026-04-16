@@ -1,0 +1,11 @@
+{
+  "backed_up_at": "2026-04-15T20:08:29.744Z",
+  "from_version": "1.36.0",
+  "from_manifest_timestamp": "2026-04-15T19:47:22.814Z",
+  "files": [
+    "hooks/gsd-statusline.js"
+  ],
+  "pristine_hashes": {
+    "hooks/gsd-statusline.js": "81354ff67ba799bdf58023b7130039e442ef15f5826cc27b38d7b6e6845e7c36"
+  }
+}

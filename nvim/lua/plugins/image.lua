@@ -1,5 +1,6 @@
 return {
   "3rd/image.nvim",
+  enabled = false, -- disabled: incompatible with nvim 0.12.0 treesitter API
   ft = { "markdown" },
   opts = {
     backend = "kitty",

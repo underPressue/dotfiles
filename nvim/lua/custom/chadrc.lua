@@ -1,0 +1,1 @@
+/Users/elrocie/.config/nvim/lua/core/chadrc.lua

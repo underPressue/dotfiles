@@ -1,0 +1,4 @@
+- dont write obvious comments
+- if write comment, write it short and single string
+- write absolute minimum comments for code. dont write comments for short obvious functions and those which names speaks for itself
+- allways write comments with //

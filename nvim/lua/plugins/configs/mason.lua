@@ -12,7 +12,7 @@ return {
     "ts_ls",
     "deno",
     "vue-language-server",
-    "prettier/vim-prettier",
+    "prettier",
 
     -- c/cpp stuff
     "clangd",

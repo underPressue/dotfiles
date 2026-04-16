@@ -188,6 +188,29 @@ start_services() {
     fi
 }
 
+# Function to setup voice memo transcription pipeline
+setup_voice_transcribe() {
+    print_status "Setting up voice memo transcription..."
+
+    chmod +x "$SOURCE_DIR/scripts/voice-memo-transcribe.sh"
+
+    local plist_src="$SOURCE_DIR/launchd/com.elrocie.voice-transcribe.plist"
+    local plist_dst="$HOME/Library/LaunchAgents/com.elrocie.voice-transcribe.plist"
+
+    if [ -f "$plist_dst" ] || [ -L "$plist_dst" ]; then
+        launchctl unload "$plist_dst" 2>/dev/null
+        rm -f "$plist_dst"
+    fi
+
+    ln -s "$plist_src" "$plist_dst"
+
+    local vault="$HOME/Library/Mobile Documents/com~apple~CloudDocs/elBrain"
+    mkdir -p "$vault/inbox" "$vault/voice-memos" "$vault/media/voice-memos"
+
+    launchctl load "$plist_dst"
+    print_success "Voice transcription agent loaded"
+}
+
 # Main installation function
 install_all() {
     print_status "Starting dotfiles setup and application installation..."
@@ -198,7 +221,8 @@ install_all() {
     install_zsh_plugins
     install_tmux_plugins
     start_services
-    
+    setup_voice_transcribe
+
     print_success "All applications installed successfully!"
     print_status "Now creating symbolic links for configuration files..."
 }

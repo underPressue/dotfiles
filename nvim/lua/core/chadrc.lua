@@ -2,8 +2,8 @@
 local M = {}
 
 M.ui = {
-  theme = "chadracula",
-  theme_toggle = { "chadracula", "chadracula" },
+  theme = "tokyonight",
+  theme_toggle = { "tokyonight", "tokyonight" },
 }
 
 return M

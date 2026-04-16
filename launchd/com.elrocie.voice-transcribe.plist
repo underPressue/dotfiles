@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.elrocie.voice-transcribe</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/elrocie/dotfiles/scripts/voice-memo-transcribe.sh</string>
+    </array>
+    <key>WatchPaths</key>
+    <array>
+        <string>/Users/elrocie/Library/Mobile Documents/iCloud~is~workflow~my~workflows/Documents/audio</string>
+    </array>
+    <key>StartInterval</key>
+    <integer>300</integer>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/Users/elrocie/Library/Python/3.11/bin:/Users/elrocie/.local/bin</string>
+        <key>HOME</key>
+        <string>/Users/elrocie</string>
+    </dict>
+    <key>StandardOutPath</key>
+    <string>/tmp/voice-transcribe.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/voice-transcribe.err.log</string>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>ThrottleInterval</key>
+    <integer>10</integer>
+</dict>
+</plist>
