@@ -80,6 +80,16 @@
             "timeout": 5
           }
         ]
+      },
+      {
+        "matcher": "Read",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"/Users/elrocie/.claude/hooks/gsd-read-injection-scanner.js\"",
+            "timeout": 5
+          }
+        ]
       }
     ],
     "PreToolUse": [
@@ -149,11 +159,10 @@
     "gitlab@claude-plugins-official": true,
     "huggingface-skills@claude-plugins-official": true
   },
-  "model": "claude-opus-4-6",
   "alwaysThinkingEnabled": true,
   "effortLevel": "high",
-  "voiceEnabled": true,
   "skipDangerousModePermissionPrompt": true,
+  "voiceEnabled": true,
   "planStoragePath": ".planning",
   "feedbackSurveyState": {
     "lastShownTime": 1754041961165
@@ -169,5 +178,6 @@
         "chrome"
       ]
     }
-  }
+  },
+  "model": "sonnet"
 }
