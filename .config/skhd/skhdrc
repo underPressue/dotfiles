@@ -1,7 +1,7 @@
 cmd + alt + ctrl + shift - 0x27 : open -a "Visual Studio Code"
 cmd + alt + ctrl + shift - 0x29 : open -a "Ghostty"
-# cmd + alt + ctrl + shift - w : open -a "Windsurf"
-cmd + alt + ctrl + shift - c : open -a "Google Chrome"
+# cmd + alt + ctrl + shift - w : skhd -k "cmd - w"
+cmd + alt + ctrl + shift - c : skhd -k "cmd - c"
 cmd + alt + ctrl + shift - s : open -a "Safari"
 cmd + alt + ctrl + shift - l : open -a "Mail"
 cmd + alt + ctrl + shift - m : open -a "Mattermost"
@@ -14,7 +14,7 @@ cmd + alt + ctrl + shift - t : open -a "Telegram"
 cmd + alt + ctrl + shift - g : open -a "Grok"
 cmd + alt + ctrl + shift - i : open -a "Claude"
 
-cmd + alt + ctrl + shift - z : open -a "iPhone Mirroring"
+cmd + alt + ctrl + shift - z : skhd -k "cmd - z"
 cmd + alt + ctrl + shift - a : open -a "Arc"
 cmd + alt + ctrl + shift - p : open -a "Кинопаб"
 
@@ -24,3 +24,15 @@ cmd + alt + ctrl + shift - h : osascript -e 'tell application "System Events" to
 
 # Map Control + Return to switch input source
 ctrl - return : osascript -e 'tell application "System Events" to key code 49 using {control down, shift down}'
+
+
+
+
+cmd + alt + ctrl + shift - b : open -a "Google Chrome"
+
+cmd + alt + ctrl + shift - tab : skhd -k "cmd - tab"
+
+cmd + alt + ctrl + shift - v : skhd -k "cmd - v"
+
+cmd + alt + ctrl + shift - delete : open -a "cmd - q"
+
