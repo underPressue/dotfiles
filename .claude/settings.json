@@ -160,7 +160,7 @@
     "huggingface-skills@claude-plugins-official": true
   },
   "alwaysThinkingEnabled": true,
-  "effortLevel": "high",
+  "effortLevel": "xhigh",
   "skipDangerousModePermissionPrompt": true,
   "voiceEnabled": true,
   "planStoragePath": ".planning",
@@ -178,6 +178,5 @@
         "chrome"
       ]
     }
-  },
-  "model": "sonnet"
+  }
 }
