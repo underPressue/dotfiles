@@ -3,3 +3,6 @@ click-repeat-interval = 1700
 auto-update-channel = stable
 background = #000000
 keybind = shift+enter=text:\n
+font-size = 18
+cursor-color = #ff11ff
+selection-background = #009900
