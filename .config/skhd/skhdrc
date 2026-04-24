@@ -21,8 +21,12 @@ cmd + alt + ctrl + shift - v : skhd -k "cmd - v"
 cmd + alt + ctrl + shift - c : skhd -k "cmd - c"
 cmd + alt + ctrl + shift - w : skhd -k "cmd - w"
 
+cmd + alt + ctrl + shift - up : skhd -k "ctrl + cmd - f"
+cmd + alt + ctrl + shift - 0x2B : skhd -k "ctrl - tab"
+cmd + alt + ctrl + shift - 0x2F : skhd -k "ctrl + shift - tab"
+
 # show desktop
-cmd + alt + ctrl + shift - h : -k "cmd - h"
+cmd + alt + ctrl + shift - h : skhd -k "cmd - h"
 
 # Map Control + Return to switch input source
 ctrl - return : osascript -e 'tell application "System Events" to key code 49 using {control down, shift down}'
@@ -31,5 +35,5 @@ cmd + alt + ctrl + shift - tab : skhd -k "cmd - tab"
 cmd + alt + ctrl + shift - delete : open -a "cmd - q"
 
 # Attach iPad (Uranus) as Sidecar display
-cmd + alt + ctrl + shift - e : ~/Sidecar.sh
+cmd + alt + ctrl + shift - e : ~/Sidecar connect Uranus
 
