@@ -178,5 +178,6 @@
         "chrome"
       ]
     }
-  }
+  },
+  "preferredNotifChannel": "ghostty"
 }
