@@ -12,4 +12,5 @@ return {
   "markdown",
   "markdown_inline",
   "diff",
+  "python",
 }
