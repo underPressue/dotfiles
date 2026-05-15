@@ -181,5 +181,9 @@
         "chrome"
       ]
     }
-  }
+  },
+  "editorMode": "vim",
+  "preferredNotifChannel": "ghostty",
+  "remoteControlAtStartup": true,
+  "agentPushNotifEnabled": true
 }
