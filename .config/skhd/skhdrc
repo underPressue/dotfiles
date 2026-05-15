@@ -1,6 +1,5 @@
 cmd + alt + ctrl + shift - 0x27 : open -a "Visual Studio Code"
 cmd + alt + ctrl + shift - 0x29 : open -a "Ghostty"
-cmd + alt + ctrl + shift - c : skhd -k "cmd - c"
 cmd + alt + ctrl + shift - s : open -a "Safari"
 cmd + alt + ctrl + shift - l : open -a "Mail"
 cmd + alt + ctrl + shift - m : open -a "Mattermost"
@@ -14,12 +13,12 @@ cmd + alt + ctrl + shift - g : open -a "Grok"
 cmd + alt + ctrl + shift - i : open -a "Claude"
 cmd + alt + ctrl + shift - p : open -a "Кинопаб"
 cmd + alt + ctrl + shift - a : open -a "Arc"
-cmd + alt + ctrl + shift - b : open -a "Google Chrome"
+cmd + alt + ctrl + shift - c : open -a "Google Chrome"
 
-cmd + alt + ctrl + shift - z : skhd -k "cmd - z"
-cmd + alt + ctrl + shift - v : skhd -k "cmd - v"
-cmd + alt + ctrl + shift - c : skhd -k "cmd - c"
-cmd + alt + ctrl + shift - w : skhd -k "cmd - w"
+# cmd + alt + ctrl + shift - z : skhd -k "cmd - z"
+# cmd + alt + ctrl + shift - v : skhd -k "cmd - v"
+# cmd + alt + ctrl + shift - c : skhd -k "cmd - c"
+# cmd + alt + ctrl + shift - w : skhd -k "cmd - w"
 
 cmd + alt + ctrl + shift - up : skhd -k "ctrl + cmd - f"
 cmd + alt + ctrl + shift - 0x2B : skhd -k "ctrl - tab"
@@ -27,9 +26,6 @@ cmd + alt + ctrl + shift - 0x2F : skhd -k "ctrl + shift - tab"
 
 # show desktop
 cmd + alt + ctrl + shift - h : skhd -k "cmd - h"
-
-# Map Control + Return to switch input source
-ctrl - return : osascript -e 'tell application "System Events" to key code 49 using {control down, shift down}'
 
 cmd + alt + ctrl + shift - tab : skhd -k "cmd - tab"
 cmd + alt + ctrl + shift - delete : open -a "cmd - q"
