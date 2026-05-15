@@ -1,11 +1,97 @@
 #!/usr/bin/env node
-// gsd-hook-version: 1.36.0
+// gsd-hook-version: 1.38.5
 // Claude Code Statusline - GSD Edition
 // Shows: model | current task (or GSD state) | directory | context usage
 
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
+
+// --- Config + last-command readers ------------------------------------------
+
+/**
+ * Walk up from dir looking for .planning/config.json and return its parsed contents.
+ * Returns {} if not found or unreadable.
+ */
+function readGsdConfig(dir) {
+  const home = os.homedir();
+  let current = dir;
+  for (let i = 0; i < 10; i++) {
+    const candidate = path.join(current, '.planning', 'config.json');
+    if (fs.existsSync(candidate)) {
+      try {
+        return JSON.parse(fs.readFileSync(candidate, 'utf8')) || {};
+      } catch (e) {
+        return {};
+      }
+    }
+    const parent = path.dirname(current);
+    if (parent === current || current === home) break;
+    current = parent;
+  }
+  return {};
+}
+
+/**
+ * Lookup a dotted key path (e.g. 'statusline.show_last_command') in a config
+ * object that may use either nested or flat keys.
+ */
+function getConfigValue(cfg, keyPath) {
+  if (!cfg || typeof cfg !== 'object') return undefined;
+  if (keyPath in cfg) return cfg[keyPath];
+  const parts = keyPath.split('.');
+  let cur = cfg;
+  for (const p of parts) {
+    if (cur == null || typeof cur !== 'object' || !(p in cur)) return undefined;
+    cur = cur[p];
+  }
+  return cur;
+}
+
+/**
+ * Extract the most recently invoked slash command from a Claude Code JSONL
+ * transcript file. Returns the command name (no leading slash) or null.
+ *
+ * Claude Code embeds slash invocations in user messages as
+ *   <command-name>/foo</command-name>
+ * We scan lines from the end of the file, stopping at the first match.
+ */
+function readLastSlashCommand(transcriptPath) {
+  if (!transcriptPath || typeof transcriptPath !== 'string') return null;
+  let content;
+  try {
+    if (!fs.existsSync(transcriptPath)) return null;
+    // Read only the tail — typical transcripts grow large. 256 KiB comfortably
+    // covers dozens of recent turns while staying cheap per render.
+    const stat = fs.statSync(transcriptPath);
+    const MAX = 256 * 1024;
+    const start = Math.max(0, stat.size - MAX);
+    const fd = fs.openSync(transcriptPath, 'r');
+    try {
+      const buf = Buffer.alloc(stat.size - start);
+      fs.readSync(fd, buf, 0, buf.length, start);
+      content = buf.toString('utf8');
+    } finally {
+      fs.closeSync(fd);
+    }
+  } catch (e) {
+    return null;
+  }
+  // Find the LAST occurrence — scan right-to-left via lastIndexOf on the tag.
+  const tagClose = '</command-name>';
+  const idx = content.lastIndexOf(tagClose);
+  if (idx < 0) return null;
+  const openTag = '<command-name>';
+  const openIdx = content.lastIndexOf(openTag, idx);
+  if (openIdx < 0) return null;
+  let name = content.slice(openIdx + openTag.length, idx).trim();
+  // Strip a leading slash if present, and any trailing arguments-on-same-line noise.
+  if (name.startsWith('/')) name = name.slice(1);
+  // Command names in Claude Code transcripts are plain identifiers like "gsd-plan-phase"
+  // or namespaced like "plugin:skill". Reject anything with whitespace/newlines/control chars.
+  if (!name || /[\s\\"<>]/.test(name) || name.length > 80) return null;
+  return name;
+}
 
 // --- GSD state reader -------------------------------------------------------
 
@@ -123,49 +209,59 @@ function runStatusline() {
     const session = data.session_id || '';
     const remaining = data.context_window?.remaining_percentage;
 
-    // Context window display (shows USED percentage scaled to usable context)
-    // Claude Code reserves ~16.5% for autocompact buffer, so usable context
-    // is 83.5% of the total window. We normalize to show 100% at that point.
-    const AUTO_COMPACT_BUFFER_PCT = 16.5;
+    // Helper: build a colored progress bar with label
+    function makeBar(label, pct) {
+      const used = Math.max(0, Math.min(100, Math.round(pct)));
+      const filled = Math.floor(used / 10);
+      const bar = '█'.repeat(filled) + '░'.repeat(10 - filled);
+      let color;
+      if (used < 50) color = '\x1b[32m';
+      else if (used < 65) color = '\x1b[33m';
+      else if (used < 80) color = '\x1b[38;5;208m';
+      else color = '\x1b[5;31m';
+      return `${color}${label} ${bar} ${used}%\x1b[0m`;
+    }
+
+    let fiveH = '';
+    const fiveHPct = data.rate_limits?.five_hour?.used_percentage;
+    const fiveHResetsAt = data.rate_limits?.five_hour?.resets_at;
+    if (fiveHPct != null) {
+      let countdown = '';
+      if (fiveHResetsAt != null) {
+        const secsLeft = Math.max(0, fiveHResetsAt - Math.floor(Date.now() / 1000));
+        const h = Math.floor(secsLeft / 3600);
+        const m = Math.floor((secsLeft % 3600) / 60);
+        countdown = h > 0 ? `${h}h${m}m` : `${m}m`;
+      }
+      const bar = makeBar('5h', fiveHPct);
+      fiveH = countdown ? `${bar} (${countdown} left)` : bar;
+    }
+
+    // Context window (normalized to usable range after autocompact buffer)
+    const totalCtx = data.context_window?.total_tokens || 1_000_000;
+    const acw = parseInt(process.env.CLAUDE_CODE_AUTO_COMPACT_WINDOW || '0', 10);
+    const AUTO_COMPACT_BUFFER_PCT = acw > 0
+      ? Math.min(100, (acw / totalCtx) * 100)
+      : 16.5;
     let ctx = '';
     if (remaining != null) {
-      // Normalize: subtract buffer from remaining, scale to usable range
       const usableRemaining = Math.max(0, ((remaining - AUTO_COMPACT_BUFFER_PCT) / (100 - AUTO_COMPACT_BUFFER_PCT)) * 100);
-      const used = Math.max(0, Math.min(100, Math.round(100 - usableRemaining)));
+      const usedCtx = Math.max(0, Math.min(100, Math.round(100 - usableRemaining)));
+      ctx = makeBar('ctx', usedCtx);
 
-      // Write context metrics to bridge file for the context-monitor PostToolUse hook.
-      // The monitor reads this file to inject agent-facing warnings when context is low.
-      // Reject session IDs with path separators or traversal sequences to prevent
-      // a malicious session_id from writing files outside the temp directory.
+      // Bridge file for context-monitor hook
       const sessionSafe = session && !/[/\\]|\.\./.test(session);
       if (sessionSafe) {
         try {
           const bridgePath = path.join(os.tmpdir(), `claude-ctx-${session}.json`);
-          const bridgeData = JSON.stringify({
+          const rawUsedPct = Math.round(100 - remaining);
+          fs.writeFileSync(bridgePath, JSON.stringify({
             session_id: session,
             remaining_percentage: remaining,
-            used_pct: used,
+            used_pct: rawUsedPct,
             timestamp: Math.floor(Date.now() / 1000)
-          });
-          fs.writeFileSync(bridgePath, bridgeData);
-        } catch (e) {
-          // Silent fail -- bridge is best-effort, don't break statusline
-        }
-      }
-
-      // Build progress bar (10 segments)
-      const filled = Math.floor(used / 10);
-      const bar = '█'.repeat(filled) + '░'.repeat(10 - filled);
-
-      // Color based on usable context thresholds
-      if (used < 50) {
-        ctx = ` \x1b[32m${bar} ${used}%\x1b[0m`;
-      } else if (used < 65) {
-        ctx = ` \x1b[33m${bar} ${used}%\x1b[0m`;
-      } else if (used < 80) {
-        ctx = ` \x1b[38;5;208m${bar} ${used}%\x1b[0m`;
-      } else {
-        ctx = ` \x1b[5;31m💀 ${bar} ${used}%\x1b[0m`;
+          }));
+        } catch (e) {}
       }
     }
 
@@ -229,24 +325,24 @@ function runStatusline() {
       } catch (e) {}
     }
 
-    // Rate limit usage (Claude.ai Pro/Max)
-    let usage = '';
-    if (data.rate_limits) {
-      const parts = [];
-      if (data.rate_limits.five_hour) {
-        const pct = Math.round(data.rate_limits.five_hour.used_percentage);
-        const color = pct < 50 ? '32' : pct < 75 ? '33' : '31';
-        parts.push(`\x1b[${color}m5h:${pct}%\x1b[0m`);
+    // Last-slash-command suffix (opt-in via statusline.show_last_command, #2538).
+    // Reads the active session transcript for the most recent <command-name> tag.
+    // Failure here must never break the statusline — wrap the entire lookup.
+    let lastCmdSuffix = '';
+    try {
+      const cfg = readGsdConfig(dir);
+      if (getConfigValue(cfg, 'statusline.show_last_command') === true) {
+        const transcriptPath = data.transcript_path;
+        const lastCmd = readLastSlashCommand(transcriptPath);
+        if (lastCmd) {
+          lastCmdSuffix = ` │ \x1b[2mlast: /${lastCmd}\x1b[0m`;
+        }
       }
-      if (data.rate_limits.seven_day) {
-        const pct = Math.round(data.rate_limits.seven_day.used_percentage);
-        const color = pct < 50 ? '32' : pct < 75 ? '33' : '31';
-        parts.push(`\x1b[${color}m7d:${pct}%\x1b[0m`);
-      }
-      if (parts.length) usage = ` │ ${parts.join(' ')}`;
+    } catch (e) {
+      // Never break the statusline on config/transcript errors
     }
 
-    // Output
+    // Output: model │ folder │ 5h bar │ ctx bar
     const dirname = path.basename(dir);
     const middle = task
       ? `\x1b[1m${task}\x1b[0m`
@@ -254,11 +350,13 @@ function runStatusline() {
         ? `\x1b[2m${gsdStateStr}\x1b[0m`
         : null;
 
-    if (middle) {
-      process.stdout.write(`${gsdUpdate}\x1b[2m${model}\x1b[0m │ ${middle} │ \x1b[2m${dirname}\x1b[0m${ctx}${usage}`);
-    } else {
-      process.stdout.write(`${gsdUpdate}\x1b[2m${model}\x1b[0m │ \x1b[2m${dirname}\x1b[0m${ctx}${usage}`);
-    }
+    const parts = [gsdUpdate + `\x1b[2m${model}\x1b[0m`];
+    if (middle) parts.push(middle);
+    parts.push(`\x1b[2m${dirname}\x1b[0m`);
+    if (fiveH) parts.push(fiveH);
+    if (ctx) parts.push(ctx);
+    const line = parts.join(' │ ') + lastCmdSuffix;
+    process.stdout.write(line);
   } catch (e) {
     // Silent fail - don't break statusline on parse errors
   }
@@ -266,6 +364,39 @@ function runStatusline() {
 }
 
 // Export helpers for unit tests. Harmless when run as a script.
-module.exports = { readGsdState, parseStateMd, formatGsdState };
+module.exports = {
+  readGsdState, parseStateMd, formatGsdState,
+  readGsdConfig, getConfigValue, readLastSlashCommand,
+};
+
+/**
+ * Render the statusline from an already-parsed hook input object. Exported for
+ * testing without feeding stdin. Returns the rendered string.
+ */
+function renderStatusline(data) {
+  const model = data.model?.display_name || 'Claude';
+  const dir = data.workspace?.current_dir || process.cwd();
+  const dirname = path.basename(dir);
+
+  let lastCmdSuffix = '';
+  try {
+    const cfg = readGsdConfig(dir);
+    if (getConfigValue(cfg, 'statusline.show_last_command') === true) {
+      const lastCmd = readLastSlashCommand(data.transcript_path);
+      if (lastCmd) {
+        lastCmdSuffix = ` │ \x1b[2mlast: /${lastCmd}\x1b[0m`;
+      }
+    }
+  } catch (e) { /* swallow */ }
+
+  const gsdStateStr = formatGsdState(readGsdState(dir) || {});
+  const middle = gsdStateStr ? `\x1b[2m${gsdStateStr}\x1b[0m` : null;
+  if (middle) {
+    return `\x1b[2m${model}\x1b[0m │ ${middle} │ \x1b[2m${dirname}\x1b[0m${lastCmdSuffix}`;
+  }
+  return `\x1b[2m${model}\x1b[0m │ \x1b[2m${dirname}\x1b[0m${lastCmdSuffix}`;
+}
+
+module.exports.renderStatusline = renderStatusline;
 
 if (require.main === module) runStatusline();

@@ -41,6 +41,7 @@
     "deny": [],
     "defaultMode": "acceptEdits"
   },
+  "model": "claude-opus-4-6[1M]",
   "hooks": {
     "SessionStart": [
       {
@@ -160,8 +161,10 @@
     "huggingface-skills@claude-plugins-official": true
   },
   "alwaysThinkingEnabled": true,
-  "effortLevel": "xhigh",
+  "effortLevel": "high",
+  "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
+  "preferredNotifChannel": "ghostty",
   "voiceEnabled": true,
   "planStoragePath": ".planning",
   "feedbackSurveyState": {
@@ -178,6 +181,5 @@
         "chrome"
       ]
     }
-  },
-  "preferredNotifChannel": "ghostty"
+  }
 }
