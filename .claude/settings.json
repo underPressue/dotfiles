@@ -61,11 +61,17 @@
     "gitlab@claude-plugins-official": true,
     "huggingface-skills@claude-plugins-official": true
   },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline-command.sh",
+    "padding": 1
+  },
   "alwaysThinkingEnabled": true,
-  "effortLevel": "high",
   "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
+  "editorMode": "vim",
   "preferredNotifChannel": "ghostty",
+  "remoteControlAtStartup": true,
   "agentPushNotifEnabled": true,
   "voiceEnabled": true,
   "planStoragePath": ".planning",
@@ -83,9 +89,5 @@
         "chrome"
       ]
     }
-  },
-  "editorMode": "vim",
-  "preferredNotifChannel": "ghostty",
-  "remoteControlAtStartup": true,
-  "agentPushNotifEnabled": true
+  }
 }
