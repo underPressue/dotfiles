@@ -41,6 +41,7 @@
     "deny": [],
     "defaultMode": "acceptEdits"
   },
+  "model": "claude-opus-4-6",
   "enabledPlugins": {
     "commit-commands@claude-code-plugins": true,
     "pr-review-toolkit@claude-code-plugins": true,
@@ -59,7 +60,15 @@
     "claude-md-management@claude-plugins-official": true,
     "skill-creator@claude-plugins-official": true,
     "gitlab@claude-plugins-official": true,
-    "huggingface-skills@claude-plugins-official": true
+    "huggingface-skills@claude-plugins-official": true,
+    "feature-dev@claude-plugins-official": true,
+    "claude-code-setup@claude-plugins-official": true,
+    "commit-commands@claude-plugins-official": true,
+    "remember@claude-plugins-official": true,
+    "aws-dev-toolkit@claude-plugins-official": true,
+    "aws-core@claude-plugins-official": true,
+    "aws-agents@claude-plugins-official": true,
+    "redis-development@claude-plugins-official": true
   },
   "statusLine": {
     "type": "command",
