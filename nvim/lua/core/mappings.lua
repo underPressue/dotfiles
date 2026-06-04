@@ -170,11 +170,11 @@ M.general = {
 
     -- TS LSP mappings
     ["<leader>to"] = {
-      "<cmd>TSLspOrganize<CR>",
+      "<cmd>TSToolsOrganizeImports<CR>",
       "Organize Imports"
     },
     ["<leader>ti"] = {
-      "<cmd>TSLspImportAll<CR>",
+      "<cmd>TSToolsAddMissingImports<CR>",
       "Add Missing Imports"
     },
 
