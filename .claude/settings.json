@@ -41,7 +41,12 @@
     "deny": [],
     "defaultMode": "acceptEdits"
   },
-  "model": "claude-opus-4-6",
+  "model": "opus",
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline-command.sh",
+    "padding": 1
+  },
   "enabledPlugins": {
     "commit-commands@claude-code-plugins": true,
     "pr-review-toolkit@claude-code-plugins": true,
@@ -70,12 +75,8 @@
     "aws-agents@claude-plugins-official": true,
     "redis-development@claude-plugins-official": true
   },
-  "statusLine": {
-    "type": "command",
-    "command": "~/.claude/statusline-command.sh",
-    "padding": 1
-  },
   "alwaysThinkingEnabled": true,
+  "effortLevel": "xhigh",
   "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
   "editorMode": "vim",
@@ -98,5 +99,6 @@
         "chrome"
       ]
     }
-  }
+  },
+  "inputNeededNotifEnabled": true
 }
