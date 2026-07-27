@@ -33,7 +33,9 @@
       "WebSearch",
       "Bash(git rm:*)",
       "Bash(/bin/ls:*)",
-      "Bash(yazi:*)"
+      "Bash(yazi:*)",
+      "Bash(skhd --restart-service)",
+      "Bash(skhd -r)"
     ],
     "deny": []
   }

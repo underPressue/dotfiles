@@ -2,6 +2,14 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Communication Style
+
+- Answer super short and strictly to the point
+- No preambles — start with the answer
+- Avoid complex explanations
+- Avoid jargon; only commonly accepted terms are fine
+- If a jargon term is unavoidable, explain it once, then use it freely
+
 ## Repository Overview
 
 This is a personal dotfiles repository containing configuration files for various development tools, primarily focused on a comprehensive Neovim setup using NvChad.

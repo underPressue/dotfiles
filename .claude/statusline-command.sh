@@ -1,5 +1,5 @@
 #!/bin/zsh
-# Claude Code status line: dir · branch · effort · context% · 5h window% · model
+# Claude Code status line: dir · branch · context% · 5h window% · model · effort
 
 input=$(cat)
 
@@ -41,7 +41,6 @@ if git -C "$cwd" rev-parse --git-dir >/dev/null 2>&1; then
   [[ -n "$branch" ]] && out+=" ${blu} ${branch}${rst}"
 fi
 
-out+="${sep}${mag}⚡ ${effort}${rst}"
 out+="${sep}${cyn}ctx${rst} $(pct $ctx)"
 out+="${sep}${cyn}5h${rst} $(pct $five_hour)"
 
@@ -52,5 +51,6 @@ if (( five_reset > 0 )); then
 fi
 
 out+="${sep}${dim}${model}${rst}"
+out+="${sep}${mag}⚡ ${effort}${rst}"
 
 printf '%s' "$out"

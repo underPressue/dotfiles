@@ -6,6 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export TERM=xterm-256color
+export COLORTERM=truecolor
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -120,10 +121,10 @@ alias vi="nvim"
 alias td="turbo dev"
 alias lg="lazygit"
 alias yz="yazi"
-alias cld="claude --dangerously-skip-permissions"
+alias claude="claude --dangerously-skip-permissions"
 alias insomnia="sudo pmset disablesleep 1"
 alias sleep="sudo pmset disablesleep 0"
-alias jupiter="ssh Jupiter"
+alias jupiter="mosh jupiter"
 
 # turborepo
 export PATH="$PATH:/Users/elrocie/.yarn/bin"
