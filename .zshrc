@@ -125,6 +125,7 @@ alias claude="claude --dangerously-skip-permissions"
 alias insomnia="sudo pmset disablesleep 1"
 alias sleep="sudo pmset disablesleep 0"
 alias jupiter="mosh jupiter"
+alias loop='$HOME/dotfiles/scripts/agent-loop.sh'
 
 # turborepo
 export PATH="$PATH:/Users/elrocie/.yarn/bin"
