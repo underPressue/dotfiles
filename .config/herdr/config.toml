@@ -1,0 +1,12 @@
+[ui]
+agent_panel_sort = "spaces"
+
+[keys]
+prefix = "ctrl+a"
+switch_tab = "prefix+1..9"
+next_tab = "prefix+l"
+previous_tab = "prefix+h"
+switch_workspace = "prefix+shift+1..9"
+next_workspace = "prefix+j"
+previous_workspace = "prefix+k"
+focus_agent = "prefix+alt+1..9"

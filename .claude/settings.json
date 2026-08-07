@@ -78,7 +78,7 @@
     "redis-development@claude-plugins-official": true
   },
   "alwaysThinkingEnabled": true,
-  "effortLevel": "xhigh",
+  "effortLevel": "high",
   "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
   "theme": "custom:purple-user",
@@ -103,6 +103,5 @@
         "chrome"
       ]
     }
-  },
-  "inputNeededNotifEnabled": true
+  }
 }

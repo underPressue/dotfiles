@@ -9,3 +9,4 @@ keybind = shift+enter=text:\n
 font-size = 18
 cursor-color = #ff11ff
 selection-background = #009900
+font-family = "FiraCode Nerd Font"

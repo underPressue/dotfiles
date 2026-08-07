@@ -240,6 +240,7 @@ declare -A files_to_link=(
     [".config/ghostty"]=".config/ghostty"
     [".config/linearmouse"]=".config/linearmouse"
     [".config/yazi"]=".config/yazi"
+    [".config/herdr/config.toml"]=".config/herdr/config.toml"
     [".tmux.conf"]=".tmux.conf"
     [".zshrc"]=".zshrc"
     [".p10k.zsh"]=".p10k.zsh"
@@ -259,6 +260,8 @@ do
     # Full path for source and target
     source_path="${SOURCE_DIR}/${source_file}"
     target_path="$HOME/${target_file}"
+
+    mkdir -p "$(dirname "$target_path")"
 
     # Remove the existing file in the home directory (if it exists)
     if [ -f "$target_path" ] || [ -L "$target_path" ]; then
