@@ -126,6 +126,7 @@ alias insomnia="sudo pmset disablesleep 1"
 alias sleep="sudo pmset disablesleep 0"
 alias jupiter="mosh jupiter"
 alias loop='$HOME/dotfiles/scripts/agent-loop.sh'
+alias opus="claude --model 'claude-opus-4-8[1M]' --effort 'max' --dangerously-skip-permissions"
 
 # turborepo
 export PATH="$PATH:/Users/elrocie/.yarn/bin"
