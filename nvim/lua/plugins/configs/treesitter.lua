@@ -8,6 +8,7 @@ return {
   "typescript",
   "vue",
   "tsx",
+  "astro",
   "c",
   "markdown",
   "markdown_inline",

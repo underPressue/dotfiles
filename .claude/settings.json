@@ -43,7 +43,7 @@
     "deny": [],
     "defaultMode": "acceptEdits"
   },
-  "model": "opus",
+  "model": "sonnet",
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline-command.sh",
@@ -103,5 +103,6 @@
         "chrome"
       ]
     }
-  }
+  },
+  "hooks": {"SessionStart":[{"matcher":"*","hooks":[{"type":"command","command":"bash '/Users/elrocie/.claude/hooks/herdr-agent-state.sh' session","timeout":10}]}]}
 }

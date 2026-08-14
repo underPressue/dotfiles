@@ -1,6 +1,8 @@
+onboarding = false
 [ui]
 agent_panel_sort = "spaces"
 
+show_agent_labels_on_pane_borders = true
 [keys]
 prefix = "ctrl+a"
 switch_tab = "prefix+1..9"
@@ -10,3 +12,16 @@ switch_workspace = "prefix+shift+1..9"
 next_workspace = "prefix+j"
 previous_workspace = "prefix+k"
 focus_agent = "prefix+alt+1..9"
+
+[experimental]
+pane_history = true
+
+[session]
+resume_agents_on_restore = true
+
+[theme]
+name = "catppuccin"
+auto_switch = false
+
+[ui.toast]
+delivery = "system"
