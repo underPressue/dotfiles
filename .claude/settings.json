@@ -84,7 +84,7 @@
   "theme": "custom:purple-user",
   "editorMode": "vim",
   "preferredNotifChannel": "ghostty",
-  "remoteControlAtStartup": true,
+  "remoteControlAtStartup": false,
   "inputNeededNotifEnabled": true,
   "agentPushNotifEnabled": true,
   "voiceEnabled": true,
