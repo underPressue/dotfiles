@@ -7,3 +7,5 @@
 .claude/.DS_Store
 
 .agent-loop/
+.claude/settings.json.bak
+.claude/skills/synced/
