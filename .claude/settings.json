@@ -41,7 +41,7 @@
       "Bash(git rm:*)"
     ],
     "deny": [],
-    "defaultMode": "acceptEdits"
+    "defaultMode": "auto"
   },
   "model": "opus",
   "hooks": {
