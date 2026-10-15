@@ -5,7 +5,9 @@ return {
   keys = {
     { "<leader>gd", "<cmd>CodeDiff<cr>", desc = "CodeDiff" }
   },
-  opts = {},
+  opts = {
+    diff = { layout = "inline" },
+  },
   config = function(_, opts)
     require("codediff").setup(opts)
     -- Patch nui tree render to guard against invalid buffers (upstream bug)
