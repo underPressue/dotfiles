@@ -178,3 +178,34 @@ export PATH="/Users/elrocie/Work/midas/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+
+# --- local Qwen3.6-35B-A3B (oMLX) as Claude Code backend ---
+qwen() {
+  local base="http://127.0.0.1:8000"
+  if ! curl -sf --max-time 3 "$base/v1/models" >/dev/null 2>&1; then
+    echo "qwen: starting oMLX…"
+    nohup ~/omlx063/bin/omlx serve \
+      --model-dir ~/.cache/lm-studio/models/lmstudio-community \
+      --host 127.0.0.1 --port 8000 >/tmp/omlx-serve.log 2>&1 &
+    local up=0
+    for i in {1..40}; do sleep 3; curl -sf --max-time 3 "$base/v1/models" >/dev/null 2>&1 && { up=1; break; }; done
+    [ "$up" = 1 ] && echo "qwen: oMLX ready" || { echo "qwen: oMLX failed (see /tmp/omlx-serve.log)"; return 1; }
+  fi
+  local sys='Local assistant for routine tasks. Tools: Bash, Read, Edit. For internet & socials, run these installed CLIs via Bash (prefer over raw curl; add --json to parse):
+- Web search:  ~/.config/web-cli/web-cli search "<query>" [--limit N] [--json]
+- Read a page: ~/.config/web-cli/web-cli fetch "<url>" [--max N] [--json]
+- Reddit (u/elrocie): ~/.config/reddit-cli/reddit-cli {post <ref>|feed|sub <name>|me} [--json]
+- X/Twitter:   ~/.config/x-cli/x-cli {tweet <ref>|home|user <@handle>|search <q>|me} [--json]
+For any digest, summary, or catch-up request on Reddit, X, a subreddit, an account, or a topic: FIRST read the file ~/.config/llm-digests/digest-playbook.md and follow it exactly — pull real data via the CLI before writing, and never fabricate.'
+  ANTHROPIC_BASE_URL="$base" \
+  ANTHROPIC_AUTH_TOKEN="local" ANTHROPIC_API_KEY="local" \
+  ANTHROPIC_MODEL="Qwen3.6-35B-A3B-MLX-6bit" \
+  ANTHROPIC_DEFAULT_HAIKU_MODEL="Qwen3.6-35B-A3B-MLX-6bit" \
+  CLAUDE_CODE_MAX_CONTEXT_TOKENS=262144 \
+  claude --dangerously-skip-permissions --bare \
+    --strict-mcp-config --mcp-config ~/.claude/qwen-mcp-empty.json \
+    --append-system-prompt "$sys" \
+    "$@"
+}
+qwen-stop() { lsof -ti :8000 | xargs kill -9 2>/dev/null && echo "oMLX stopped" || echo "oMLX not running"; }
